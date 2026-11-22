@@ -1,0 +1,532 @@
+Código por cada sección de la página 6 “Simulador de Amenazas Digitales” o “Simulador Amenazas”
+
+Página 6: “Simulador de Amenazas Digitales”
+
+Sección 1. Encabezado
+
+Incluye:
+•	Logo de Acacías CyberSafe.
+•	Menú principal.
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+•	Acceso de usuario e inicio de sesión.
+
+Código Autor
+
+Lenguaje de Programación:  HTML
+
+<!-- ENCABEZADO ACACÍAS CYBERSAFE -->
+<header class="top-header">
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="imagenes/logo-acacias-cybersafe.png" alt="Logo Acacías CyberSafe">
+        <span>Acacías CyberSafe</span>
+    </div>
+    <!-- BOTONES DERECHOS -->
+    <div class="header-actions">
+        <a href="#inscripcion" class="btn-inscribete">
+            Inscríbete
+        </a>
+        <a href="#perfil" class="icon-btn">
+            👤
+        </a>
+        <a href="#carrito" class="icon-btn">
+            🛒
+        </a>
+    </div>
+</header>
+<!-- MENÚ PRINCIPAL -->
+<nav class="main-menu">
+    <a href="index.html">Inicio</a>
+    <a href="bienvenida.html">Bienvenida</a>
+    <a href="test-inicial.html">Test Inicial</a>
+    <a href="aprendizaje.html">Aprendizaje</a>
+    <a href="modulos.html">Módulos Educativos</a>
+    <a href="simulador.html" class="active">
+        Simulador Amenazas
+    </a>
+    <a href="evaluacion-final.html">Evaluación Final</a>
+    <a href="logros.html">Logros</a>
+    <a href="sus.html">Evaluación Usabilidad</a>
+    <a href="resultados.html">Resultados</a>
+</nav>
+
+Lenguaje de Programación: CSS
+/* ===== CONFIGURACIÓN GENERAL ===== */
+body{
+    margin:0;
+    background:#020c18;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* ===== ENCABEZADO ===== */
+.top-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 45px;
+    background:#020c18;
+}
+/* LOGO */
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo-container img{
+    width:40px;
+    height:40px;
+}
+.logo-container span{
+    color:white;
+    font-size:28px;
+    font-weight:600;
+}
+/* BOTONES DERECHOS */
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+.btn-inscribete{
+    background:#3be7ab;
+    color:#000;
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn-inscribete:hover{
+    background:#2fd89d;
+}
+.icon-btn{
+    color:white;
+    font-size:28px;
+    text-decoration:none;
+}
+/* ===== MENÚ ===== */
+.main-menu{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:18px 20px 25px;
+    background:#020c18;
+}
+.main-menu a{
+    color:white;
+    text-decoration:none;
+    padding:14px 20px;
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:8px;
+    background:#111827;
+    transition:0.3s;
+    font-size:16px;
+}
+.main-menu a:hover{
+    background:#1d4ed8;
+}
+.main-menu a.active{
+    background:#1e40af;
+    border-color:#2563eb;
+}
+
+
+Sección 2. Introducción al Simulador
+Presenta el propósito de la página.
+•	Título: “Simulador de Amenazas Digitales”.
+•	Texto: “Tu entorno seguro para aprender a identificar y prevenir fraudes en tiempo real.”
+•	Botón “Comenzar Recorrido”.
+Invita al usuario a practicar la identificación de amenazas en un espacio educativo y protegido.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 2 - INTRODUCCIÓN AL SIMULADOR -->
+<section class="hero-simulador">
+    <div class="hero-overlay">
+        <h1>Simulador de Amenazas Digitales</h1>
+        <p>
+            Tu entorno seguro para aprender a identificar y prevenir
+            fraudes en tiempo real.
+        </p>
+        <a href="#recorrido" class="btn-recorrido">
+            Comenzar Recorrido
+        </a>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== INTRODUCCIÓN AL SIMULADOR ===== */
+.hero-simulador{
+    width:90%;
+    max-width:1200px;
+    height:320px;
+    margin:40px auto;
+    border-radius:25px;
+    overflow:hidden;
+    background-image:
+        linear-gradient(
+            rgba(2,12,24,0.55),
+            rgba(2,12,24,0.55)
+        ),
+        url("imagenes/simulador-ciberseguridad.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.hero-overlay{
+    width:80%;
+}
+.hero-overlay h1{
+    color:white;
+    font-size:70px;
+    font-weight:700;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+.hero-overlay p{
+    color:#d8d8d8;
+    font-size:18px;
+    margin-bottom:35px;
+}
+.btn-recorrido{
+    display:inline-block;
+    background:#39e8aa;
+    color:#000;
+    text-decoration:none;
+    padding:16px 34px;
+    border-radius:30px;
+    font-size:20px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn-recorrido:hover{
+    background:#25d79a;
+    transform:translateY(-2px);
+}
+
+
+Sección 3. Escenarios de Simulación
+Explica las actividades prácticas disponibles.
+•	Título: “Aprende a identificar y prevenir fraudes digitales en un entorno seguro”.
+•	Incluye simulaciones sobre:
+o	Ataques de phishing.
+o	Comprobantes de pago falsos.
+o	Enlaces y sitios web fraudulentos.
+o	Suplantación de identidad en redes sociales y mensajería.
+•	Permite analizar evidencias, reconocer señales de alerta y tomar decisiones.
+•	Ofrece retroalimentación automática después de cada respuesta.
+•	Presenta recomendaciones para proteger la información personal, financiera y digital.
+•	Su objetivo es fortalecer las competencias digitales, reducir el riesgo de fraude y promover una cultura de seguridad en Acacías.
+•	Aclara que las simulaciones son educativas, no representan amenazas reales y no recopilan información sensible.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 3 - ESCENARIOS DE SIMULACIÓN -->
+<section class="escenarios-simulacion">
+    <div class="contenedor-simulacion">
+        <h2>
+            Aprende a identificar y prevenir fraudes digitales en un entorno seguro
+        </h2>
+        <p>
+            Bienvenido al Simulador de Amenazas Digitales de Acacías CyberSafe.
+            En esta sección podrás interactuar con situaciones reales inspiradas
+            en los principales riesgos que enfrentan los ciudadanos en internet,
+            como intentos de phishing, enlaces fraudulentos, mensajes de
+            suplantación de identidad y comprobantes de pago falsos.
+        </p>
+        <p>
+            El simulador ha sido diseñado para que desarrolles habilidades
+            prácticas de ciberseguridad mediante actividades interactivas y
+            ejercicios de toma de decisiones. A través de diferentes escenarios,
+            podrás analizar evidencias, identificar señales de alerta y aplicar
+            buenas prácticas para proteger tu información personal, financiera
+            y digital.
+        </p>
+        <p>
+            Cada ejercicio incluye retroalimentación automática que te permitirá
+            comprender por qué una acción es correcta o incorrecta, fortaleciendo
+            progresivamente tus conocimientos y capacidades para enfrentar
+            amenazas del mundo real.
+        </p>
+        <h3>¿Qué encontrarás en esta sección?</h3>
+        <ul>
+            <li>Simulaciones de ataques de phishing.</li>
+            <li>Identificación de comprobantes falsos de pago.</li>
+            <li>Detección de enlaces y sitios web fraudulentos.</li>
+            <li>Casos de suplantación de identidad en redes sociales y mensajería.</li>
+            <li>Retroalimentación inmediata sobre cada decisión tomada.</li>
+            <li>Recomendaciones de protección y prevención.</li>
+        </ul>
+        <h3>Objetivo del simulador</h3>
+        <p>
+            Fortalecer las competencias digitales de los usuarios mediante
+            experiencias prácticas de aprendizaje que permitan reconocer
+            amenazas cibernéticas, reducir el riesgo de fraude y promover
+            una cultura de seguridad digital en la comunidad de Acacías.
+        </p>
+        <div class="alerta-educativa">
+            <strong>Importante:</strong>
+            <p>
+                Todas las simulaciones son escenarios educativos diseñados
+                exclusivamente con fines formativos. No representan amenazas
+                reales ni recopilan información sensible de los participantes.
+            </p>
+        </div>
+        <div class="frase-final">
+            <em>
+                "La mejor forma de aprender ciberseguridad es enfrentando los
+                riesgos en un entorno seguro. Practica, identifica y protégete
+                con Acacías CyberSafe."
+            </em>
+            <span class="check">✅</span>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 3 - ESCENARIOS DE SIMULACIÓN ===== */
+.escenarios-simulacion{
+    background:#010d1a;
+    padding:50px 20px;
+    color:#ffffff;
+}
+.contenedor-simulacion{
+    max-width:950px;
+    margin:0 auto;
+}
+.contenedor-simulacion h2{
+    font-size:56px;
+    line-height:1.1;
+    font-weight:700;
+    margin-bottom:25px;
+    color:#ffffff;
+}
+.contenedor-simulacion p{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:18px;
+    color:#f1f1f1;
+}
+.contenedor-simulacion h3{
+    font-size:28px;
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#ffffff;
+}
+.contenedor-simulacion ul{
+    margin-left:25px;
+    margin-bottom:25px;
+}
+.contenedor-simulacion li{
+    margin-bottom:10px;
+    font-size:18px;
+}
+.alerta-educativa{
+    margin-top:25px;
+    padding:18px;
+    background:rgba(255,255,255,0.05);
+    border-left:4px solid #37e5a8;
+    border-radius:8px;
+}
+.alerta-educativa strong{
+    color:#37e5a8;
+    font-size:18px;
+}
+.alerta-educativa p{
+    margin-top:10px;
+    margin-bottom:0;
+}
+.frase-final{
+    margin-top:30px;
+    font-size:20px;
+    color:#ffffff;
+    font-style:italic;
+}
+.check{
+    margin-left:8px;
+    font-size:22px;
+}
+@media (max-width:768px){
+    .contenedor-simulacion h2{
+        font-size:38px;
+    }
+    .contenedor-simulacion p,
+    .contenedor-simulacion li{
+        font-size:16px;
+    }
+}
+
+
+Sección 4. Guía de Navegación
+Orienta al usuario durante los ejercicios.
+•	Título: “Cómo Navegar”.
+•	Recomienda:
+o	Seguir los indicadores de riesgo.
+o	Analizar cuidadosamente las direcciones URL.
+o	No compartir códigos OTP durante la simulación.
+•	Incluye una imagen de escudos y candados digitales, relacionada con la protección de datos y la ciberseguridad.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 4 - GUÍA DE NAVEGACIÓN -->
+<section class="guia-navegacion">
+    <div class="guia-contenedor">
+        <!-- CONTENIDO IZQUIERDO -->
+        <div class="guia-texto">
+            <h2>Cómo Navegar</h2>
+            <p>
+                Sigue los indicadores de riesgo, analiza las URL y nunca
+                compartas códigos OTP durante la simulación.
+            </p>
+            <ul>
+                <li>✅ Sigue los indicadores de riesgo presentados en cada escenario.</li>
+                <li>✅ Analiza cuidadosamente las direcciones URL antes de tomar una decisión.</li>
+                <li>✅ Nunca compartas códigos OTP durante las simulaciones.</li>
+            </ul>
+        </div>
+        <!-- IMAGEN DERECHA -->
+        <div class="guia-imagen">
+            <img src="imagenes/ciberseguridad-escudos.png"
+                 alt="Escudos y candados de ciberseguridad">
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 4 - GUÍA DE NAVEGACIÓN ===== */
+.guia-navegacion{
+    background:#0b1220;
+    padding:70px 50px;
+}
+.guia-contenedor{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+.guia-texto{
+    flex:1;
+}
+.guia-texto h2{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+.guia-texto p{
+    color:#cfcfcf;
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:25px;
+    max-width:650px;
+}
+.guia-texto ul{
+    list-style:none;
+    padding:0;
+}
+.guia-texto li{
+    color:#ffffff;
+    font-size:18px;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+.guia-imagen{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+.guia-imagen img{
+    width:100%;
+    max-width:500px;
+    border-radius:25px;
+    object-fit:cover;
+    box-shadow:0 8px 25px rgba(0,0,0,0.35);
+}
+/* RESPONSIVE */
+@media (max-width: 992px){
+    .guia-contenedor{
+        flex-direction:column;
+        text-align:center;
+    }
+    .guia-texto h2{
+        font-size:48px;
+    }
+    .guia-texto p{
+        max-width:100%;
+    }
+    .guia-texto ul{
+        text-align:left;
+        display:inline-block;
+    }
+}
+
+
+Sección 5. Pie de página
+Incluye:
+•	Acacías CyberSafe.
+•	Correo: info@acaciascybersafe.com.
+•	Ubicación: Acacías, Colombia.
+•	Aviso legal: © 2026 Acacías CyberSafe. Todos los derechos reservados.
+La página ofrece una experiencia práctica para reconocer fraudes digitales y aprender a responder de forma segura, sin exponer información real del usuario.
+
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 5 - PIE DE PÁGINA -->
+<footer class="footer-cybersafe">
+    <div class="footer-contenido">
+        <p class="footer-nombre">
+            Acacías CyberSafe © 2026
+        </p>
+        <p>
+            <a href="mailto:info@acaciascybersafe.com">
+                info@acaciascybersafe.com
+            </a>
+        </p>
+        <p>
+            Acacías, Colombia
+        </p>
+        <p class="footer-copy">
+            © 2026 Acacías CyberSafe. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 5 - PIE DE PÁGINA ===== */
+.footer-cybersafe{
+    background:#010d1a;
+    padding:40px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+.footer-contenido{
+    max-width:1200px;
+    margin:auto;
+}
+.footer-nombre{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+.footer-cybersafe p{
+    color:#ffffff;
+    font-size:16px;
+    margin:6px 0;
+}
+.footer-cybersafe a{
+    color:#ffffff;
+    text-decoration:none;
+}
+.footer-cybersafe a:hover{
+    color:#39e8aa;
+}
+.footer-copy{
+    margin-top:25px !important;
+    font-size:15px;
+    color:#d9d9d9;
+}
+

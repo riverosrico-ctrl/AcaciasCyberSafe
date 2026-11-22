@@ -1,0 +1,1183 @@
+Código por cada sección de la página “Inicio”
+	
+Sección 1. Encabezado
+
+•	Logo de Acacías CyberSafe.
+•	Menú principal con enlaces a:
+o	Inicio
+o	Bienvenida
+o	Test Inicial
+o	Aprendizaje
+o	Módulos Educativos
+o	Simulador de Amenazas
+o	Evaluación Final
+o	Logros
+o	Evaluación de Usabilidad
+o	Resultados
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+Menú de usuario con opción de Perfil y cierre de sesión
+
+Código Autor
+
+Lenguaje de Programación: HTML (header.html)
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acacías CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo-container">
+        <img src="logo.png" alt="Acacías CyberSafe" class="logo">
+        <span class="brand-name">Acacías CyberSafe</span>
+    </div>
+
+    <nav class="main-nav">
+
+        <a href="#">Inicio</a>
+        <a href="#">Bienvenida</a>
+        <a href="#">Test Inicial</a>
+        <a href="#">Aprendizaje</a>
+        <a href="#">Módulos Educativos</a>
+        <a href="#">Simulador Amenazas</a>
+        <a href="#">Evaluación Final</a>
+        <a href="#">Logros</a>
+        <a href="#">Evaluación Usabilidad</a>
+        <a href="#">Resultados</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+        <button class="btn-register">
+            Inscríbete
+        </button>
+
+        <div class="user-menu">
+            <i class="fa-solid fa-circle-user"></i>
+
+            <div class="dropdown">
+                <a href="#">Perfil</a>
+                <a href="#">Cerrar Sesión</a>
+            </div>
+        </div>
+
+        <div class="cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count">0</span>
+        </div>
+
+    </div>
+
+</header>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+
+
+
+Lenguaje de Programación: CSS (styles.css)
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#050913;
+}
+
+.header{
+    background:#070d18;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:42px;
+    height:auto;
+}
+
+.brand-name{
+    color:white;
+    font-size:30px;
+    font-weight:600;
+}
+
+.main-nav{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.main-nav a{
+    text-decoration:none;
+    color:white;
+    padding:14px 22px;
+    border:1px solid #3f4653;
+    border-radius:10px;
+    background:#0d1422;
+    transition:0.3s;
+}
+
+.main-nav a:hover{
+    background:#19d3a2;
+    color:black;
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.btn-register{
+    background:#28e0ab;
+    color:#000;
+    border:none;
+    padding:14px 30px;
+    border-radius:40px;
+    font-size:20px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.btn-register:hover{
+    background:#17f0b3;
+}
+
+.user-menu{
+    position:relative;
+    color:#1ee9b4;
+    font-size:34px;
+    cursor:pointer;
+}
+
+.dropdown{
+    position:absolute;
+    top:50px;
+    right:0;
+    background:white;
+    display:none;
+    min-width:180px;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.dropdown a{
+    display:block;
+    padding:12px;
+    text-decoration:none;
+    color:#333;
+}
+
+.dropdown a:hover{
+    background:#f1f1f1;
+}
+
+.user-menu:hover .dropdown{
+    display:block;
+}
+
+.cart{
+    position:relative;
+    color:white;
+    font-size:28px;
+}
+
+.cart-count{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    width:20px;
+    height:20px;
+    background:white;
+    color:black;
+    border-radius:50%;
+    text-align:center;
+    line-height:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+Lenguaje de Programación: JavaScript (app.js)
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuItems = document.querySelectorAll(".main-nav a");
+
+    menuItems.forEach(item => {
+
+        item.addEventListener("click", (e) => {
+
+            e.preventDefault();
+
+            menuItems.forEach(link =>
+                link.classList.remove("active")
+            );
+
+            item.classList.add("active");
+
+            console.log("Página seleccionada:", item.textContent);
+
+        });
+
+    });
+
+});
+
+
+Lenguaje de Programación: CSS adicional para página activa
+Agregar al final del archivo CSS:
+CSS
+.main-nav a.active{
+background:#19d3a2;
+color:black;
+border:none;
+}
+
+
+Sección 2. Hero
+Es la sección principal de bienvenida.
+•	Título: “Protección Digital para Acacías”.
+•	Texto sobre aprender a identificar fraudes y tomar decisiones seguras.
+•	Botón “Comienza Ahora”.
+•	Frase: “Aprende a protegerte en el mundo digital.”
+•	Información sobre:
+•	Problema identificado.
+Los fraudes digitales representan una amenaza creciente para los ciudadanos que utilizan plataformas de pago electrónico, redes sociales y servicios en línea. En el municipio de Acacías, muchas personas se encuentran expuestas a riesgos como el phishing, la suplantación de identidad y los comprobantes de pago falsificados debido a la limitada capacidad para reconocer señales de alerta y adoptar prácticas seguras de protección digital. Esta situación puede generar pérdidas económicas, comprometer información personal y disminuir la confianza en las tecnologías digitales.
+•	Beneficiarios.
+*Comerciantes, que utilizan medios de pago digitales y pueden ser afectados por comprobantes de pago fraudulentos.
+*Estudiantes, que interactúan constantemente con plataformas digitales, redes sociales y servicios en línea.
+*Adultos mayores, quienes pueden presentar mayores dificultades para identificar amenazas digitales emergentes.
+*Trabajadores independientes, que realizan actividades económicas mediante herramientas tecnológicas y requieren fortalecer sus prácticas de seguridad digital.
+*Comunidad de Acacías en general, interesada en aprender a proteger su información y prevenir fraudes digitales.
+•	Objetivo general.
+Fortalecer el conocimiento sobre ciberriesgos y la capacidad de identificación de fraudes digitales en una muestra de habitantes del municipio de Acacías, Meta.
+•	Botón “Conocer más”.
+•	Incluye el logo del sitio y una imagen de fondo.
+Código Autor:
+Lenguaje de Programación:  HTML
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <div class="hero-center">
+
+            <img src="logo-cybersafe.png"
+                 alt="Acacias CyberSafe"
+                 class="hero-logo">
+
+            <h1>Protección Digital para Acacías</h1>
+
+            <p class="hero-subtitle">
+                Aprende a identificar fraudes y toma decisiones seguras
+            </p>
+
+            <button class="btn-primary">
+                Comienza Ahora
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="info-section">
+
+    <h2>Aprende a protegerte en el mundo digital.</h2>
+
+    <div class="info-card">
+
+        <h3>Problema identificado</h3>
+
+        <p>
+            Los fraudes digitales representan una amenaza creciente para los ciudadanos que utilizan plataformas de pago electrónico, redes sociales y servicios en línea. En el municipio de Acacías, muchas personas se encuentran expuestas a riesgos como el phishing, la suplantación de identidad y los comprobantes de pago falsificados debido a la limitada capacidad para reconocer señales de alerta y adoptar prácticas seguras de protección digital.
+        </p>
+
+    </div>
+
+    <div class="info-card">
+
+        <h3>Beneficiarios</h3>
+
+        <ul>
+
+            <li>Comerciantes.</li>
+
+            <li>Estudiantes.</li>
+
+            <li>Adultos mayores.</li>
+
+            <li>Trabajadores independientes.</li>
+
+            <li>Comunidad de Acacías en general.</li>
+
+        </ul>
+
+    </div>
+
+    <div class="info-card">
+
+        <h3>Objetivo General</h3>
+
+        <p>
+            Fortalecer el conocimiento sobre ciberriesgos y la capacidad de identificación de fraudes digitales en una muestra de habitantes del municipio de Acacías, Meta.
+        </p>
+
+    </div>
+
+    <div class="hero-buttons">
+
+        <button class="btn-primary">
+            Comenzar experiencia
+        </button>
+
+        <button class="btn-secondary">
+            Conocer más
+        </button>
+
+    </div>
+
+</section>
+Lenguaje de Programación: CSS
+.hero{
+
+    background-image:url("banner-cyber.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    height:700px;
+
+    position:relative;
+
+}
+
+.hero-overlay{
+
+    background:rgba(5,10,20,.55);
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-center{
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero-logo{
+
+    width:110px;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-size:5rem;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.hero-subtitle{
+
+    font-size:1.6rem;
+
+    margin-bottom:35px;
+
+}
+
+.btn-primary{
+
+    background:#24E2A8;
+
+    color:black;
+
+    border:none;
+
+    padding:16px 36px;
+
+    border-radius:35px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.btn-primary:hover{
+
+    background:#18f0b5;
+
+}
+
+.info-section{
+
+    background-image:url("fondo-codigo.jpg");
+
+    background-size:cover;
+
+    padding:80px;
+
+    color:white;
+
+}
+
+.info-section h2{
+
+    font-size:4rem;
+
+    margin-bottom:40px;
+
+}
+
+.info-card{
+
+    margin-bottom:50px;
+
+    max-width:950px;
+
+}
+
+.info-card h3{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+    color:#24E2A8;
+
+}
+
+.info-card p,
+.info-card li{
+
+    font-size:1.3rem;
+
+    line-height:1.7;
+
+}
+
+.hero-buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn-secondary{
+
+    background:transparent;
+
+    border:2px solid #24E2A8;
+
+    color:#24E2A8;
+
+    padding:14px 30px;
+
+    border-radius:35px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+
+Sección 3. Nuestra Filosofía
+Presenta la base del proyecto.
+•	Título: “Nuestra Filosofía”.
+•	Texto sobre el origen del proyecto en la ingeniería de sistemas y su propósito educativo.
+Código Autor
+Lenguaje de Programación: HTML
+<section style="background:#020b1a;padding:100px 20px;text-align:center;">
+    <h2 style="color:#fff;font-size:60px;font-weight:700;margin-bottom:20px;">
+        Nuestra Filosofía
+    </h2>
+
+    <p style="color:#fff;font-size:22px;">
+        Originado en ingeniería de sistemas para educar y proteger.
+    </p>
+</section>
+
+Lenguaje de Programación: CSS
+.philosophy-section{
+    background:#020b1a;
+    padding:100px 20px;
+    text-align:center;
+}
+.philosophy-section h2{
+    color:white;
+    font-size:60px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+.philosophy-section p{
+    color:white;
+    font-size:22px;
+}
+
+
+Sección 4. Experiencias Interactivas
+Invita a practicar situaciones reales de seguridad digital.
+Incluye tres experiencias:
+•	Phishing
+o	Simulaciones de correos electrónicos sospechosos.
+o	Botón “Ver Simulación”.
+•	Suplantación
+o	Entrenamiento para detectar intentos de suplantación.
+o	Botón “Iniciar Sesión”.
+•	Enlaces Maliciosos
+o	Práctica para verificar enlaces sospechosos.
+o	Botón “Explorar Enlaces”.
+Cada experiencia tiene una imagen, una descripción y una acción.
+
+Código Autor:
+Lenguaje de Programación: HTML
+<section id="experiencias" class="experiencias-section">
+    <div class="container">
+        <h2>Experiencias Interactivas</h2>
+
+        <div class="cards">
+
+            <!-- Phishing -->
+            <div class="card">
+                <img src="https://via.placeholder.com/500x300" alt="Phishing">
+                <h3>Phishing</h3>
+                <p>
+                    Simulaciones reales de correos electrónicos sospechosos
+                    para identificar trampas digitales comunes.
+                </p>
+                <a href="#" class="btn-link">Ver Simulación</a>
+            </div>
+
+            <!-- Suplantación -->
+            <div class="card">
+                <img src="https://via.placeholder.com/500x300" alt="Suplantación">
+                <h3>Suplantación</h3>
+                <p>
+                    Entrenamiento en la detección de intentos de
+                    suplantación de identidad mediante escenarios
+                    de simulación interactiva.
+                </p>
+                <a href="#" class="btn-link">Iniciar Sesión</a>
+            </div>
+
+            <!-- Enlaces Maliciosos -->
+            <div class="card">
+                <img src="https://via.placeholder.com/500x300" alt="Enlaces Maliciosos">
+                <h3>Enlaces Maliciosos</h3>
+                <p>
+                    Práctica para verificar enlaces sospechosos y
+                    analizar URLs potencialmente peligrosas en un
+                    entorno seguro y controlado.
+                </p>
+                <a href="#" class="btn-link">Explorar Enlaces</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+/* SECCIÓN */
+.experiencias-section{
+    background:#010b18;
+    padding:100px 40px;
+    color:#fff;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+/* TÍTULO */
+.experiencias-section h2{
+    text-align:center;
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:70px;
+    color:#fff;
+}
+
+/* TARJETAS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:80px;
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:18px;
+    margin-bottom:25px;
+}
+
+.card h3{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+.card p{
+    font-size:1.2rem;
+    line-height:1.6;
+    color:#ffffff;
+    margin-bottom:30px;
+}
+
+/* BOTONES */
+.btn-link{
+    color:#1cffb7;
+    text-decoration:underline;
+    font-size:1.2rem;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn-link:hover{
+    color:#6dffd4;
+}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+    .cards{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .experiencias-section h2{
+        font-size:3rem;
+    }
+}
+</style>
+
+Sustituye cada:
+HTML
+src=https://via.placeholder.com/500x300
+
+por la URL de las imágenes que subas a Wix, por ejemplo:
+HTML
+src=https://static.wixstatic.com/media/phishing.png 
+
+HTML
+
+src=https://static.wixstatic.com/media/suplantacion.png 
+
+HTML
+src=https://static.wixstatic.com/media/enlaces-maliciosos.png
+
+y en los botones puedes colocar los enlaces a las páginas correspondientes:
+HTML
+<a href="/simulador-phishing" class="btn-link">Ver Simulación</a>
+<a href="/simulador-suplantacion" class="btn-link">Iniciar Sesión</a>
+<a href="/analizador-enlaces" class="btn-link">Explorar Enlaces</a>
+
+Con esto la sección quedará prácticamente igual a la del diseño mostrado.
+
+
+Sección 5. Registro de Pruebas
+Invita a las personas a participar en la fase de prueba.
+•	Título: “Únete a la Fase de Prueba”.
+•	Texto de invitación.
+•	Formulario de registro.
+Código Autor
+Lenguaje de Programación: HTML (Estructura)
+<section id="fase-prueba" class="fase-prueba-section">
+    <div class="fase-prueba-container">
+        <!-- Información -->
+        <div class="info-prueba">
+            <h2>Únete a la Fase de Prueba</h2>
+            <p>
+                Únete a nuestra iniciativa educativa y protege tu información digital.
+                Participa en una fase de prueba exclusiva diseñada para fortalecer la
+                seguridad digital de los habitantes del municipio de Acacías.
+            </p>
+        </div>
+        <!-- Formulario -->
+        <div class="formulario-prueba">
+            <form>
+                <div class="fila">
+                    <div class="campo">
+                        <label>Nombre *</label>
+                        <input type="text">
+                    </div>
+                    <div class="campo">
+                        <label>Apellidos *</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="campo">
+                    <label>Correo electrónico *</label>
+                    <input type="email" placeholder="ejemplo@correo.com">
+                </div>
+                <div class="campo">
+                    <label>Teléfono *</label>
+                    <input type="tel" placeholder="+57 300 000 0000">
+                </div>
+                <div class="campo">
+                    <label>Mensaje de interés</label>
+                    <textarea rows="5"
+                    placeholder="Cuéntanos por qué te gustaría participar...">
+                    </textarea>
+                </div>
+                <button type="submit" class="btn-enviar">
+                    Solicitar Acceso
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS (Diseño Visual)
+.fase-prueba-section{
+    background:#030d1c;
+    padding:90px 40px;
+    color:#ffffff;
+}
+.fase-prueba-container{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:80px;
+    align-items:center;
+}
+/* Texto izquierdo */
+.info-prueba h2{
+    font-size:4.5rem;
+    font-weight:700;
+    line-height:1.05;
+    margin-bottom:35px;
+}
+.info-prueba p{
+    font-size:1.45rem;
+    line-height:1.5;
+    max-width:600px;
+}
+/* Formulario */
+.formulario-prueba form{
+    width:100%;
+}
+.fila{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+.campo{
+    margin-bottom:18px;
+}
+.campo label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+}
+.campo input,
+.campo textarea{
+    width:100%;
+    background:transparent;
+    border:1px solid #233247;
+    border-radius:8px;
+    color:white;
+    padding:14px;
+    font-size:15px;
+    box-sizing:border-box;
+}
+.campo input:focus,
+.campo textarea:focus{
+    border-color:#38efb1;
+    outline:none;
+}
+.btn-enviar{
+    width:100%;
+    border:none;
+    background:#34e7a1;
+    color:#03131f;
+    font-size:18px;
+    font-weight:600;
+    padding:16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+.btn-enviar:hover{
+    background:#48f7b1;
+}
+/* Responsive */
+@media(max-width:1024px){
+    .fase-prueba-container{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+    .info-prueba h2{
+        font-size:3rem;
+    }
+    .fila{
+        grid-template-columns:1fr;
+    }
+}
+
+
+Sección 6. Inscripción Externa
+Dirige a los visitantes al formulario oficial de inscripción.
+•	Título: “Formulario de Inscripción Oficial CDX”.
+•	Botón “Inscribirse Ahora”.
+Código Autor
+Lenguaje de Programación: HTML
+<section id="inscripcion-cdx" class="inscripcion-section">
+    <div class="inscripcion-card">
+        <h2>
+            Formulario de Inscripción Oficial CDX
+        </h2>
+        <a href="https://TU-ENLACE-DE-INSCRIPCION.com"
+           target="_blank"
+           class="btn-inscripcion">
+            Inscribirse Ahora
+        </a>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==========================
+   INSCRIPCIÓN OFICIAL CDX
+========================== */
+.inscripcion-section{
+    background:#020b18;
+    padding:100px 40px;
+}
+.inscripcion-card{
+    max-width:1100px;
+    margin:0 auto;
+    background:#131c28;
+    border-radius:30px;
+    padding:80px 40px;
+    text-align:center;
+}
+/* TÍTULO */
+.inscripcion-card h2{
+    color:#ffffff;
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:40px;
+}
+/* BOTÓN */
+.btn-inscripcion{
+    display:inline-block;
+    padding:16px 40px;
+    background:#36e6a0;
+    color:#04131d;
+    text-decoration:none;
+    font-size:1.2rem;
+    font-weight:600;
+    border-radius:50px;
+    transition:all .3s ease;
+    border:2px solid transparent;
+}
+.btn-inscripcion:hover{
+    background:#49f7b1;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px
+    rgba(54,230,160,.25);
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .inscripcion-card{
+        padding:50px 25px;
+    }
+    .inscripcion-card h2{
+        font-size:2rem;
+        line-height:1.3;
+    }
+    .btn-inscripcion{
+        width:100%;
+        max-width:300px;
+    }
+}
+
+
+Sección 7. Recursos Externos
+Ofrece acceso a materiales y herramientas adicionales.
+Incluye cuatro recursos:
+•	Guía de Phishing.
+•	Identidad Digital.
+•	Enlaces Maliciosos.
+•	Protección de Datos.
+Cada recurso tiene una imagen y un botón “Acceder”.
+Código Autor
+Lenguaje de Programación: HTML
+<section id="recursos-externos" class="recursos-section">
+    <div class="recursos-container">
+        <h2>Recursos Externos</h2>
+        <p class="recursos-subtitulo">
+            Acceso a herramientas y guías externas para mejorar la seguridad digital.
+        </p>
+        <div class="recursos-grid">
+            <!-- Guía de Phishing -->
+            <div class="recurso-card">
+                <img src="img/phishing.png"
+                     alt="Guía de Phishing">
+                <h3>Guía de Phishing</h3>
+                <a href="https://staysafeonline.org"
+                   target="_blank"
+                   class="btn-recurso">
+                    Acceder
+                </a>
+            </div>
+            <!-- Identidad Digital -->
+            <div class="recurso-card">
+                <img src="img/identidad-digital.png"
+                     alt="Identidad Digital">
+                <h3>Identidad Digital</h3>
+                <a href="https://www.incibe.es"
+                   target="_blank"
+                   class="btn-recurso">
+                    Acceder
+                </a>
+            </div>
+            <!-- Enlaces Maliciosos -->
+            <div class="recurso-card">
+                <img src="img/enlaces-maliciosos.png"
+                     alt="Enlaces Maliciosos">
+                <h3>Enlaces Maliciosos</h3>
+                <a href="https://www.virustotal.com"
+                   target="_blank"
+                   class="btn-recurso">
+                    Acceder
+                </a>
+            </div>
+            <!-- Protección de Datos -->
+            <div class="recurso-card">
+                <img src="img/proteccion-datos.png"
+                     alt="Protección de Datos">
+                <h3>Protección de Datos</h3>
+                <a href="https://www.sic.gov.co/proteccion-de-datos-personales"
+                   target="_blank"
+                   class="btn-recurso">
+                    Acceder
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* =========================
+   RECURSOS EXTERNOS
+========================= */
+.recursos-section{
+    background:#020b18;
+    padding:100px 40px;
+    color:#ffffff;
+}
+.recursos-container{
+    max-width:1400px;
+    margin:auto;
+    text-align:center;
+}
+.recursos-container h2{
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+.recursos-subtitulo{
+    font-size:1.4rem;
+    margin-bottom:80px;
+    color:#ffffff;
+}
+/* GRID */
+.recursos-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+/* TARJETAS */
+.recurso-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.recurso-card img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    margin-bottom:25px;
+}
+.recurso-card h3{
+    font-size:1.8rem;
+    margin-bottom:25px;
+    font-weight:600;
+    color:#ffffff;
+}
+/* BOTÓN */
+.btn-recurso{
+    color:#2df0a4;
+    text-decoration:underline;
+    font-size:1.4rem;
+    transition:.3s;
+}
+.btn-recurso:hover{
+    color:#6effc8;
+}
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .recursos-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:60px;
+    }
+    .recursos-container h2{
+        font-size:3rem;
+    }
+}
+@media(max-width:768px){
+    .recursos-grid{
+        grid-template-columns:1fr;
+    }
+    .recursos-subtitulo{
+        margin-bottom:50px;
+    }
+}
+
+
+Sección 8. Pie de página
+Incluye:
+•	Nombre del proyecto: Acacías CyberSafe.
+•	Correo de contacto: info@acaciascybersafe…
+•	Texto de derechos reservados de 2026.
+Esta estructura presenta el proyecto, enseña sobre fraudes digitales, ofrece prácticas interactivas y guía al usuario hacia registros, evaluaciones y recursos educativos. También puedo convertir esta descripción en textos más profesionales para presentar el proyecto o mejorar la organización del menú.
+
+
+Código Autor
+Lenguaje de Programación: HTML	
+<footer id="footer-acacias" class="footer-section">
+    <div class="footer-container">
+        <h3>Acacías CyberSafe</h3>
+        <p>
+            <a href="mailto:info@acaciascybersafe.com">
+                info@acaciascybersafe.com
+            </a>
+        </p>
+        <p>Acacías, Colombia</p>
+        <div class="footer-divider"></div>
+        <p class="copyright">
+            © 2026 Acacías CyberSafe. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+Lenguaje de Programación: CSS
+/* =========================
+   PIE DE PÁGINA
+========================= */
+.footer-section{
+    background:#020b18;
+    padding:120px 20px 50px;
+    color:#ffffff;
+    text-align:center;
+}
+.footer-container{
+    max-width:1200px;
+    margin:0 auto;
+}
+.footer-container h3{
+    font-size:2rem;
+    font-weight:600;
+    margin-bottom:10px;
+}
+.footer-container p{
+    font-size:1.2rem;
+    margin:8px 0;
+}
+.footer-container a{
+    color:#ffffff;
+    text-decoration:none;
+    transition:0.3s;
+}
+.footer-container a:hover{
+    color:#36e6a0;
+}
+.footer-divider{
+    width:100%;
+    max-width:700px;
+    height:1px;
+    background:rgba(255,255,255,0.1);
+    margin:40px auto 30px;
+}
+.copyright{
+    font-size:1.1rem;
+    color:#ffffff;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .footer-section{
+        padding:80px 20px 40px;
+    }
+    .footer-container h3{
+        font-size:1.6rem;
+    }
+    .footer-container p{
+        font-size:1rem;
+    }
+}
+
+

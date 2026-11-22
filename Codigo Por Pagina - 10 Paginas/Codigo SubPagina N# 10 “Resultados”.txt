@@ -1,0 +1,974 @@
+Código por cada sección de la página 10 “Resultados”
+
+Página 10: “Resultados”
+
+Sección 1. Encabezado
+
+Incluye:
+•	Logo de Acacías CyberSafe.
+•	Menú principal.
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+•	Acceso de usuario e inicio de sesión.
+
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<!-- SECCIÓN 1 - ENCABEZADO -->
+<header class="top-header">
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="imagenes/logo-acacias-cybersafe.png"
+             alt="Logo Acacías CyberSafe">
+        <span>Acacías CyberSafe</span>
+    </div>
+    <!-- ACCIONES DEL USUARIO -->
+    <div class="header-actions">
+        <a href="#inscripcion" class="btn-inscribete">
+            Inscríbete
+        </a>
+        <a href="#usuario" class="icon-btn">
+            👤
+        </a>
+        <a href="#carrito" class="icon-btn">
+            🛒
+        </a>
+    </div>
+</header>
+<!-- MENÚ PRINCIPAL -->
+<nav class="menu-principal">
+    <a href="index.html">Inicio</a>
+    <a href="bienvenida.html">Bienvenida</a>
+    <a href="test-inicial.html">Test Inicial</a>
+    <a href="aprendizaje.html">Aprendizaje</a>
+    <a href="modulos-educativos.html">Módulos Educativos</a>
+    <a href="simulador.html">Simulador Amenazas</a>
+    <a href="evaluacion-final.html">Evaluación Final</a>
+    <a href="logros.html">Logros</a>
+    <a href="evaluacion-usabilidad.html">
+        Evaluación Usabilidad
+    </a>
+    <!-- PÁGINA ACTIVA -->
+    <a href="resultados.html" class="active">
+        Resultados
+    </a>
+</nav>
+
+Lenguaje de Programación: CSS
+/* ===== ENCABEZADO ===== */
+.top-header{
+    background:#020c18;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 35px;
+}
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo-container img{
+    width:42px;
+    height:auto;
+}
+.logo-container span{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+}
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.btn-inscribete{
+    background:#39e8aa;
+    color:#000;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn-inscribete:hover{
+    background:#28d79a;
+}
+.icon-btn{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:26px;
+}
+/* ===== MENÚ PRINCIPAL ===== */
+.menu-principal{
+    background:#020c18;
+    padding:12px 0;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+}
+.menu-principal a{
+    color:#ffffff;
+    text-decoration:none;
+    padding:12px 18px;
+    border:1px solid rgba(255,255,255,0.20);
+    border-radius:8px;
+    background:#121826;
+    transition:0.3s;
+    font-size:14px;
+}
+.menu-principal a:hover{
+    background:#1f3f81;
+}
+.menu-principal a.active{
+    background:#1e40af;
+    border-color:#3b82f6;
+}
+
+
+Sección 2. Mensaje Final de Éxito
+
+Felicita al usuario por completar el recorrido.
+•	Mensaje: “Gracias por participar en Acacías CyberSafe”.
+•	Confirma que finalizó el proceso de aprendizaje.
+•	Destaca los temas trabajados:
+o	Ciberseguridad.
+o	Prevención de fraudes digitales.
+o	Protección de información personal.
+•	Botón “Explorar Resultados”.
+
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<!-- SECCIÓN 2 - MENSAJE FINAL DE ÉXITO -->
+<section class="mensaje-exito">
+    <div class="overlay-exito">
+        <h1>
+            🎉 Gracias por participar en
+            <br>
+            Acacías CyberSafe
+        </h1>
+        <p>
+            Has finalizado satisfactoriamente el recorrido de aprendizaje
+            diseñado para fortalecer tus conocimientos sobre ciberseguridad,
+            prevención de fraudes digitales y protección de la información
+            personal.
+        </p>
+        <a href="#resultados" class="btn-resultados">
+            Explorar Resultados
+        </a>
+    </div>
+</section>
+
+Lenguaje de Programación:  CSS
+
+/* ===== SECCIÓN 2 - MENSAJE FINAL DE ÉXITO ===== */
+.mensaje-exito{
+    width:95%;
+    max-width:1280px;
+    min-height:420px;
+    margin:45px auto;
+    border-radius:28px;
+    overflow:hidden;
+    position:relative;
+    background-image:
+    linear-gradient(
+        rgba(2,12,24,0.65),
+        rgba(2,12,24,0.65)
+    ),
+    url("imagenes/finalizacion-cybersafe.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:
+    0 0 25px rgba(57,232,170,0.08);
+}
+.overlay-exito{
+    text-align:center;
+    width:90%;
+    padding:40px;
+}
+/* TÍTULO */
+.overlay-exito h1{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+/* TEXTO */
+.overlay-exito p{
+    color:#ffffff;
+    font-size:22px;
+    line-height:1.5;
+    max-width:900px;
+    margin:0 auto 35px auto;
+}
+/* BOTÓN */
+.btn-resultados{
+    display:inline-block;
+    background:#39e8aa;
+    color:#000000;
+    text-decoration:none;
+    padding:18px 42px;
+    border-radius:40px;
+    font-size:22px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn-resultados:hover{
+    background:#28d79a;
+    transform:translateY(-3px);
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .overlay-exito h1{
+        font-size:50px;
+    }
+    .overlay-exito p{
+        font-size:18px;
+    }
+}
+@media(max-width:768px){
+    .overlay-exito{
+        padding:25px;
+    }
+    .overlay-exito h1{
+        font-size:38px;
+    }
+    .overlay-exito p{
+        font-size:16px;
+    }
+    .btn-resultados{
+        width:100%;
+        max-width:320px;
+    }
+}
+
+
+Sección 3. Resumen de Progreso y Módulos
+
+Muestra el avance general del usuario.
+
+Durante el desarrollo de los módulos fortaleciste conocimientos relacionados con la identificación de amenazas digitales, la protección de datos personales, la creación de contraseñas seguras, la autenticación en dos pasos, la detección de intentos de phishing, la validación de comprobantes de pago electrónicos y las medidas de protección en redes sociales y plataformas digitales.
+Estos conocimientos contribuyen a mejorar tu capacidad para reconocer situaciones de riesgo, tomar decisiones seguras y adoptar buenas prácticas de ciberseguridad en actividades personales, académicas y comerciales.
+•	Presenta ocho módulos completados:
+o	Módulo 1: 100%.
+o	Módulo 2: 100%.
+o	Módulo 3: 100%.
+o	Módulo 4: 100%.
+o	Módulo 5: 100%.
+o	Módulo 6: 100%.
+o	Módulo 7: 100%.
+o	Módulo 8: 100%.
+
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<!-- SECCIÓN 3 - RESUMEN DE PROGRESO -->
+<section class="resumen-progreso">
+    <div class="progreso-grid">
+        <!-- TARJETA IZQUIERDA -->
+        <div class="card-resumen">
+            <h2>
+                Resumen: Módulos completados.
+            </h2>
+            <div class="porcentaje-general">
+                100%
+            </div>
+            <h3>
+                Progreso General: 100%
+            </h3>
+            <p>
+                Durante tu recorrido completaste los módulos de formación
+                diseñados para fortalecer tus competencias en seguridad
+                digital. Cada módulo abordó amenazas y situaciones reales
+                presentes en el uso cotidiano de internet, redes sociales,
+                plataformas de mensajería y servicios financieros digitales.
+            </p>
+        </div>
+        <!-- TARJETA DERECHA -->
+        <div class="card-modulos">
+            <h2>Módulos Completados</h2>
+            <!-- MÓDULO 1 -->
+            <div class="modulo-item">
+                <span>Módulo 1</span>
+                <div class="barra-container">
+                    <div class="barra-progreso"></div>
+                </div>
+                <span class="porcentaje">100%</span>
+            </div>
+            <!-- MÓDULO 2 -->
+            <div class="modulo-item">
+                <span>Módulo 2</span>
+                <div class="barra-container">
+                    <div class="barra-progreso"></div>
+                </div>
+                <span class="porcentaje">100%</span>
+            </div>
+            <!-- MÓDULO 3 -->
+            <div class="modulo-item">
+                <span>Módulo 3</span>
+                <div class="barra-container">
+                    <div class="barra-progreso"></div>
+                </div>
+                <span class="porcentaje">100%</span>
+            </div>
+            <!-- MÓDULO 4 -->
+            <div class="modulo-item">
+                <span>Módulo 4</span>
+                <div class="barra-container">
+                    <div class="barra-progreso"></div>
+                </div>
+                <span class="porcentaje">100%</span>
+            </div>
+            <!-- MÓDULO 5 -->
+            <div class="modulo-item">
+                <span>Módulo 5</span>
+                <div class="barra-container">
+                    <div class="barra-progreso"></div>
+                </div>
+                <span class="porcentaje">100%</span>
+            </div>
+            <!-- MÓDULO 6 -->
+            <div class="modulo-item">
+                <span>Módulo 6</span>
+                <div class="barra-container">
+                    <div class="barra-progreso"></div>
+                </div>
+                <span class="porcentaje">100%</span>
+            </div>
+            <!-- MÓDULO 7 -->
+            <div class="modulo-item">
+                <span>Módulo 7</span>
+                <div class="barra-container">
+                    <div class="barra-progreso"></div>
+                </div>
+                <span class="porcentaje">100%</span>
+            </div>
+            <!-- MÓDULO 8 -->
+            <div class="modulo-item">
+                <span>Módulo 8</span>
+                <div class="barra-container">
+                    <div class="barra-progreso"></div>
+                </div>
+                <span class="porcentaje">100%</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación:  CSS
+
+/* ===== SECCIÓN 3 - RESUMEN DE PROGRESO ===== */
+.resumen-progreso{
+    background:#010d1a;
+    padding:60px 30px;
+}
+.progreso-grid{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:20px;
+}
+/* TARJETAS */
+.card-resumen,
+.card-modulos{
+    background:#111827;
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:28px;
+    padding:40px;
+}
+/* RESUMEN */
+.card-resumen h2{
+    *olor:white;
+    font-size:32px;
+  * line-height:1.2;
+    margin-botto*:25px;
+}
+.porcentaje-general{
+   *color:#39e8aa;
+    font-size:120px*
+    font-weight:700;
+    line-hei*ht:1;
+    margin-bottom:15px;
+}
+.*ard-resumen h3{
+    color:white;
+    font-size:20px;
+    margin-bottom:20px;
+}
+.card-resumen p{
+    color:#d4d4d4;
+    font-size:17px;
+    line-height:1.5;
+}
+/* MÓDULOS */
+.card-modulos h2{
+    color:whi*e;
+    font-size:28*x;
+    margin-bottom:35px;
+}
+.mod*lo-item{
+    display:grid;
+    gri*-template-columns*120px 1fr 70px;
+*   align-items:center;
+    gap:15*x;
+    margin-bottom*30px;
+}
+.modulo-item span{
+    co*or:white;
+    font-size:16px;
+}
+.*arra-container{
+    width:100%;
+  * height:7px;
+    background:*gba(255,255,255,0.15);
+    border*radius:20px;
+}
+.barra-progreso{
+ *  width:100%;
+*   height:100%;
+   *background:#39e8aa;
+    border-radius:20px;
+}
+.porcentaje{
+    color:#39e8aa !important;
+    font-weight:700;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .*rogreso-grid{
+        grid-templat*-columns:1fr;
+    }
+    .card-res*men{
+        text-align:center;
+  * }
+    .porcentaje-general{
+*       font-size:90px;
+    }
+}
+@m*dia(max-width:768px){
+    .modulo*item{
+        grid-template-column*:1fr;
+        gap:8px;
+    }
+    *card-res*men,
+    .card-modulos{
+        pa*ding:25px;
+    }
+    .card-resume* h2{
+        font-size*26px;
+    }
+    .card-modulos h*{
+        font-size:24px;
+    }
+}
+*
+
+Sección 4. Recomendaciones Digitales
+
+Ofrece consejos para mantener hábitos seguros.
+•	Verificar enlaces y remitentes.
+•	Usar contraseñas únicas y seguras.
+•	Activar la autenticación en dos pasos.
+•	No compartir información sensible.
+•	Confirmar los pagos antes de entregar productos o servicios.
+•	Mantener actualizados dispositivos y aplicaciones.
+•	Consultar fuentes oficiales.
+•	Reportar intentos de fraude a las autoridades competentes.
+
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<!-- SECCIÓN 5 - RECOMENDACIONES DIGITALES -->
+<section class="recomendaciones-digitales">
+    <div class="intro-recomendaciones">
+        <h2>Recomendaciones.</h2>
+        <p>
+            La ciberseguridad es un proceso continuo que requiere actualización
+            permanente frente a nuevas amenazas digitales. Por esta razón,
+            es importante mantener hábitos de protección y aplicar
+            constantemente las buenas prácticas aprendidas durante esta experiencia.
+        </p>
+        <p>
+            Recuerda que la mejor defensa frente a los fraudes digitales es la
+            prevención. Analiza cuidadosamente los mensajes que recibes,
+            verifica la autenticidad de los enlaces y transacciones, protege
+            tus credenciales de acceso y utiliza mecanismos adicionales de
+            seguridad cuando estén disponibles.
+        </p>
+    </div>
+    <div class="card-recomendaciones">
+        <h3>Recomendaciones para tu vida digital</h3>
+        <ul>
+            <li>✅ Verifica siempre la autenticidad de enlaces y remitentes.</li>
+            <li>✅ Utiliza contraseñas únicas y robustas para cada servicio.</li>
+            <li>✅ Activa la autenticación en dos pasos (2FA).</li>
+            <li>✅ No compartas información sensible por redes sociales o mensajería instantánea.</li>
+            <li>✅ Confirma directamente los pagos antes de entregar productos o servicios.</li>
+            <li>✅ Mantén actualizados tus dispositivos y aplicaciones.</li>
+            <li>✅ Consulta únicamente fuentes oficiales para realizar trámites digitales.</li>
+            <li>✅ Reporta cualquier intento de fraude a las autoridades competentes.</li>
+        </ul>
+    </div>
+</section>
+
+
+Lenguaje de Programación: CSS
+
+
+/* ===== SECCIÓN 5 - RECOMENDACIONES DIGITALES ===== */
+.recomendaciones-digitales{
+    background:#010d1a;
+    padding:70px 20px;
+}
+/* BLOQUE SUPERIOR */
+.intro-recomendaciones{
+    max-width:900px;
+    margin:0 auto 50px auto;
+    text-align:center;
+}
+.intro-recomendaciones h2{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+.intro-recomendaciones p{
+    color:#d4d4d4;
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+/* TARJETA */
+.card-recomendaciones{
+    max-width:700px;
+    margin:auto;
+    background:#141b29;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:24px;
+    padding:40px;
+}
+.card-recomendaciones h3{
+    text-align:center;
+    color:#39e8aa;
+    font-size:22px;
+    margin-bottom:30px;
+}
+.card-recomendaciones ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.card-recomendaciones li{
+    color:#ffffff;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .intro-recomendaciones h2{
+        font-size:42px;
+    }
+    .intro-recomendaciones p{
+        font-size:18px;
+    }
+    .card-recomendaciones{
+        padding:25px;
+    }
+    .card-recomendaciones li{
+        font-size:16px;
+    }
+}
+
+
+Sección 5. Insignias y Reconocimientos Finales
+Muestra los logros obtenidos al finalizar.
+•	Nivel alcanzado: Protector Digital.
+•	Insignias desbloqueadas:
+o	Experto en Phishing.
+o	Guardián de Contraseñas.
+o	Verificador de Pagos.
+o	Navegante Seguro.
+o	Defensor Digital.
+•	Incluye imágenes relacionadas con seguridad, pagos, dispositivos y trofeos.
+Código Autor
+Lenguaje de Programación: HTML
+<section class="achievements-section">
+    <div class="achievements-container">
+        <h2>
+            🏆 Reconocimientos Obtenidos
+        </h2>
+        <h3 class="achievement-level">
+            Nivel alcanzado: Protector Digital
+        </h3>
+        <p class="achievement-subtitle">
+            Insignias desbloqueadas:
+        </p>
+        <div class="badges-grid">
+            <div class="badge-card">
+                <img src="img/badge-phishing.png"
+                     alt="Experto en Phishing">
+                <h4>
+                    🛡️ Experto en Phishing
+                </h4>
+            </div>
+            <div class="badge-card">
+                <img src="img/badge-password.png"
+                     alt="Guardián de Contraseñas">
+                <h4>
+                    🔐 Guardián de Contraseñas
+                </h4>
+            </div>
+            <div class="badge-card">
+                <img src="img/badge-payment.png"
+                     alt="Verificador de Pagos">
+                <h4>
+                    💳 Verificador de Pagos
+                </h4>
+            </div>
+            <div class="badge-card">
+                <img src="img/badge-device.png"
+                     alt="Navegante Seguro">
+                <h4>
+                    📱 Navegante Seguro
+                </h4>
+            </div>
+            <div class="badge-card">
+                <img src="img/badge-trophy.png"
+                     alt="Defensor Digital">
+                <h4>
+                    🏆 Defensor Digital
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación:  CSS
+.achievements-section{
+    background:#020b18;
+    padding:100px 40px;
+}
+.achievements-container{
+    width:95%;
+    margin:auto;
+    background:#111827;
+    border-radius:25px;
+    padding:60px;
+    text-align:center;
+}
+.achievements-container h2{
+    color:white;
+    font-size:72px;
+    margin-bottom:25px;
+    font-weight:700;
+}
+.achievement-level{
+    color:#22e6a7;
+    font-size:42px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+.achievement-subtitle{
+    color:#cbd5e1;
+    font-size:30px;
+    margin-bottom:50px;
+}
+.badges-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+.badge-card{
+    background:#050d1d;
+    border-radius:25px;
+    padding:25px;
+    transition:.3s;
+}
+.badge-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(34,230,167,.25);
+}
+.badge-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+.badge-card h4{
+    color:white;
+    font-size:28px;
+    line-height:1.4;
+}
+
+Lenguaje de Programación: JavaScript opcional (animación de insignias)
+JavaScript
+const badges = document.querySelectorAll(".badge-card");
+ 
+badges.forEach((badge,index)=>{
+ 
+badge.style.opacity="0";
+ 
+setTimeout(()=>{
+ 
+badge.style.transition="all 0.6s ease";
+badge.style.opacity="1";
+badge.style.transform="translateY(0)";
+ 
+}, index * 250);
+ 
+});
+
+
+Sección 6. Créditos del Proyecto
+Presenta la información académica del proyecto.
+•	Proyecto: Acacías CyberSafe.
+•	Programa: Ingeniería de Sistemas.
+•	Tipo: Proyecto de Grado.
+•	Universidad: Universidad Nacional Abierta y a Distancia (UNAD).
+•	Propósito: desarrollar un prototipo móvil educativo para fortalecer competencias básicas en ciberseguridad y prevenir fraudes digitales.
+Código Autor
+Lenguaje de Programación: HTML
+<section class="credits-section">
+    <div class="credits-container">
+        <h2>
+            👨‍🎓 Créditos del Proyecto
+        </h2>
+        <div class="credit-item">
+            <span>Nombre del proyecto</span>
+            <p>Acacías CyberSafe</p>
+        </div>
+        <div class="credit-item">
+            <span>Programa</span>
+            <p>Ingeniería de Sistemas</p>
+        </div>
+        <div class="credit-item">
+            <span>Tipo</span>
+            <p>Proyecto de Grado</p>
+        </div>
+        <div class="credit-item">
+            <span>Universidad</span>
+            <p>
+                Universidad Nacional Abierta y a Distancia (UNAD)
+            </p>
+        </div>
+        <div class="credit-item">
+            <span>Propósito</span>
+            <p>
+                Desarrollar un prototipo móvil educativo para fortalecer
+                competencias básicas en ciberseguridad y prevenir fraudes
+                digitales mediante experiencias de aprendizaje interactivas,
+                simulaciones de amenazas y actividades de formación dirigidas
+                a la comunidad del municipio de Acacías, Meta.
+            </p>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+.credits-section{
+    background:#020b18;
+    padding:100px 40px;
+}
+.credits-container{
+    width:85%;
+    margin:auto;
+    background:#08111f;
+    border-radius:20px;
+    padding:60px;
+}
+.credits-container h2{
+    color:white;
+    font-size:54px;
+    margin-bottom:50px;
+    font-weight:700;
+}
+.credit-item{
+    padding:22px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+.credit-item:last-child{
+    border-bottom:none;
+}
+.credit-item span{
+    display:block;
+    color:#94a3b8;
+    font-size:22px;
+    margin-bottom:12px;
+}
+.credit-item p{
+    color:white;
+    font-size:30px;
+    line-height:1.5;
+}
+
+
+Sección 7. Despedida Final
+Cierra la experiencia con un mensaje motivador.
+•	Título: “🚀 Mensaje Final”.
+•	Frase: “La tecnología es más segura cuando se utiliza con conocimiento.”
+•	Agradece la participación del usuario.
+•	Invita a seguir identificando amenazas, protegiendo la información y promoviendo una cultura de ciberseguridad.
+Código Autor
+Lenguaje de Programación: HTML
+<section class="final-goodbye">
+    <div class="final-goodbye-content">
+        <span class="final-tag">
+            🚀 MENSAJE FINAL
+        </span>
+        <h2>
+            La tecnología es más segura cuando se utiliza con conocimiento.
+        </h2>
+        <p>
+            Gracias por formar parte de Acacías CyberSafe. Esperamos que los
+            conocimientos adquiridos te permitan identificar amenazas digitales,
+            proteger tu información y contribuir a una cultura de ciberseguridad
+            más sólida dentro de tu comunidad.
+        </p>
+        <div class="action-message">
+            <p>
+                Continúa fortaleciendo tus conocimientos, identificando riesgos,
+                protegiendo tus dispositivos y compartiendo buenas prácticas de
+                seguridad digital con familiares, amigos y compañeros.
+            </p>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+.final-goodbye{
+    background:#2f6fde;
+    padding:120px 40px;
+    text-align:center;
+}
+.final-goodbye-content{
+    max-width:1100px;
+    margin:auto;
+}
+.final-tag{
+    color:white;
+    font-size:22px;
+    letter-spacing:3px;
+    font-weight:600;
+    text-transform:uppercase;
+    display:block;
+    margin-bottom:30px;
+}
+.final-goodbye h2{
+    color:white;
+    font-size:70px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:35px;
+}
+.final-goodbye p{
+    color:white;
+    font-size:28px;
+    line-height:1.8;
+    max-width:1000px;
+    margin:auto;
+}
+.action-message{
+    margin-top:40px;
+}
+.action-message p{
+    font-size:24px;
+    opacity:.95;
+}
+
+
+Sección 8. Pie de página
+Incluye:
+•	Acacías CyberSafe.
+•	Correo: info@acaciascybersafe.com.
+•	Ubicación: Acacías, Colombia.
+•	Aviso legal: © 2026 Acacías CyberSafe. Todos los derechos reservados.
+La página “Resultados” resume el progreso, los conocimientos, las competencias y los reconocimientos obtenidos durante la formación en seguridad digital.
+Código Autor:
+Lenguaje de Programación: HTML
+<footer class="footer-cybersafe">
+    <div class="footer-container">
+        <div class="footer-description">
+            <h3>Acacías CyberSafe</h3>
+            <p>
+                La página Resultados resume el progreso, los conocimientos,
+                las competencias y los reconocimientos obtenidos durante la
+                formación en seguridad digital.
+            </p>
+        </div>
+        <div class="footer-contact">
+            <p>
+                Acacías CyberSafe © 2026
+            </p>
+            <p>
+                info@acaciascybersafe.com
+            </p>
+            <p>
+                Acacías, Colombia
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <p>
+                © 2026 Acacías CyberSafe. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+</footer>
+
+Lenguaje de Programación: CSS
+.footer-cybersafe{
+    background:#020b18;
+    padding:60px 30px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+.footer-description{
+    margin-bottom:30px;
+}
+.footer-description h3{
+    color:white;
+    font-size:34px;
+    margin-bottom:15px;
+}
+.footer-description p{
+    color:#cbd5e1;
+    font-size:20px;
+    line-height:1.7;
+    max-width:850px;
+    margin:auto;
+}
+.footer-contact{
+    margin:25px 0;
+}
+.footer-contact p{
+    color:white;
+    font-size:24px;
+    margin-bottom:10px;
+}
+.footer-copyright{
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.10);
+}
+.footer-copyright p{
+    color:white;
+    font-size:22px;
+}
+

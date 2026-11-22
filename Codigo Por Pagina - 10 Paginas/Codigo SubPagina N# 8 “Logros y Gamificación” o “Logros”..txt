@@ -1,0 +1,608 @@
+Código por cada sección de la página 8 “Logros y Gamificación” o “Logros”.
+Página 8: “Logros y Gamificación” o “Logros”
+Sección 1. Encabezado
+Incluye:
+•	Logo de Acacías CyberSafe.
+•	Menú principal.
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+•	Acceso de usuario e inicio de sesión.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 1 - ENCABEZADO -->
+<header class="top-header">
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="imagenes/logo-acacias-cybersafe.png"
+             alt="Logo Acacías CyberSafe">
+        <span>Acacías CyberSafe</span>
+    </div>
+    <!-- ACCIONES DEL USUARIO -->
+    <div class="header-actions">
+        <a href="#inscripcion" class="btn-inscribete">
+            Inscríbete
+        </a>
+        <a href="#usuario" class="icon-btn">
+            👤
+        </a>
+        <a href="#carrito" class="icon-btn">
+            🛒
+        </a>
+    </div>
+</header>
+<!-- MENÚ PRINCIPAL -->
+<nav class="menu-principal">
+    <a href="index.html">Inicio</a>
+    <a href="bienvenida.html">Bienvenida</a>
+    <a href="test-inicial.html">Test Inicial</a>
+    <a href="aprendizaje.html">Aprendizaje</a>
+    <a href="modulos-educativos.html">Módulos Educativos</a>
+    <a href="simulador.html">Simulador Amenazas</a>
+    <a href="evaluacion-final.html">Evaluación Final</a>
+    <!-- OPCIÓN ACTIVA DE ESTA PÁGINA -->
+    <a href="logros.html" class="active">
+        Logros
+    </a>
+    <a href="evaluacion-usabilidad.html">
+        Evaluación Usabilidad
+    </a>
+    <a href="resultados.html">
+        Resultados
+    </a>
+</nav>
+
+Lenguaje de Programación: CSS
+/* ===== ENCABEZADO ===== */
+.top-header{
+    background:#020c18;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 35px;
+}
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo-container img{
+    width:42px;
+    height:auto;
+}
+.logo-container span{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+}
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.btn-inscribete{
+    background:#39e8aa;
+    color:#000;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn-inscribete:hover{
+    background:#28d79a;
+}
+.icon-btn{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:26px;
+}
+/* ===== MENÚ ===== */
+.menu-principal{
+    background:#020c18;
+    padding:12px 0;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+}
+.menu-principal a{
+    color:#ffffff;
+    text-decoration:none;
+    padding:12px 18px;
+    border:1px solid rgba(255,255,255,0.20);
+    border-radius:8px;
+    background:#121826;
+    transition:0.3s;
+    font-size:14px;
+}
+.menu-principal a:hover{
+    background:#1f3f81;
+}
+.menu-principal a.active{
+    background:#1e40af;
+    border-color:#3b82f6;
+}
+
+
+Sección 2. Progreso de Nivel
+Muestra el avance del usuario dentro de la plataforma.
+•	Título: “Logros y Gamificación”.
+•	Nivel alcanzado: Nivel 5.
+•	Próximo nivel: Nivel 6 · Guardián Digital.
+•	Experiencia actual: 1.350 / 2.000 XP.
+•	Indica que faltan 650 XP para subir de nivel.
+•	Motiva al usuario a seguir completando retos.
+•	Incluye una imagen de una moneda tecnológica con un escudo, relacionada con seguridad digital y recompensas.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 2 - PROGRESO DE NIVEL -->
+<section class="logros-gamificacion">
+    <h1>Logros y Gamificación</h1>
+    <div class="gamificacion-container">
+        <!-- INFORMACIÓN DEL NIVEL -->
+        <div class="nivel-actual">
+            <h2>Nivel Alcanzado</h2>
+            <div class="numero-nivel">
+                Nivel 5
+            </div>
+            <p class="proximo-nivel">
+                Próximo Nivel: 6 · Guardián Digital
+            </p>
+        </div>
+        <!-- EXPERIENCIA -->
+        <div class="experiencia-card">
+            <div class="xp-header">
+                <span>Experiencia (XP)</span>
+                <span class="xp-actual">
+                    1.350 / 2.000 XP
+                </span>
+            </div>
+            <div class="barra-xp">
+                <div class="progreso-xp"></div>
+            </div>
+            <p class="mensaje-xp">
+                Te faltan 650 XP para subir de nivel.
+                ¡Sigue completando retos!
+            </p>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 2 - LOGROS Y GAMIFICACIÓN ===== */
+.logros-gamificacion{
+    background:#010d1a;
+    padding:60px 40px 80px;
+}
+.logros-gamificacion h1{
+    text-align:center;
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:50px;
+}
+.gamificacion-container{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+/* BLOQUE IZQUIERDO */
+.nivel-actual{
+    flex:1;
+}
+.nivel-actual h2{
+    color:#ffffff;
+    font-size:52px;
+    margin-bottom:20px;
+}
+.numero-nivel{
+    font-size:110px;
+    font-weight:700;
+    color:#39e8aa;
+    text-shadow:
+        0 0 10px rgba(57,232,170,.6),
+        0 0 20px rgba(57,232,170,.4);
+    margin-bottom:20px;
+}
+.proximo-nivel{
+    color:#d5d5d5;
+    font-size:20px;
+}
+/* BLOQUE DERECHO */
+.experiencia-card{
+    flex:1.8;
+    background:#111827;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:35px;
+}
+.xp-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+    font-size:26px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+.xp-actual{
+    color:#39e8aa;
+    font-weight:700;
+}
+/* BARRA */
+.barra-xp{
+    width:100%;
+    height:28px;
+    background:#4b5563;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+.progreso-xp{
+    width:67.5%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #3b82f6
+    );
+    border-radius:30px;
+}
+.mensaje-xp{
+    color:#bfbfbf;
+    font-size:18px;
+    line-height:1.6;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .gamificacion-container{
+        flex-direction:column;
+        text-align:center;
+    }
+    .logros-gamificacion h1{
+        font-size:48px;
+    }
+    .nivel-actual h2{
+        font-size:38px;
+    }
+    .numero-nivel{
+        font-size:80px;
+    }
+    .xp-header{
+        flex-direction:column;
+        gap:10px;
+        font-size:22px;
+    }
+}
+
+
+Sección 3. Puntos Obtenidos
+Presenta la puntuación acumulada.
+•	Título: “Puntos Obtenidos”.
+•	Puntaje actual: 1.250 PTS.
+•	Esta sección reconoce la participación y el avance del usuario en las actividades educativas.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 3 - PUNTOS OBTENIDOS -->
+<section class="puntos-obtenidos">
+    <div class="card-puntos">
+        <div class="linea-superior"></div>
+        <img
+            src="imagenes/moneda-cybersafe.png"
+            alt="Moneda tecnológica con escudo de seguridad"
+            class="imagen-moneda"
+        >
+        <h2>Puntos Obtenidos</h2>
+        <div class="puntaje-actual">
+            1,250 PTS
+        </div>
+        <p class="descripcion-puntos">
+            Esta puntuación reconoce tu participación activa y el progreso
+            alcanzado durante las actividades educativas de Acacías CyberSafe.
+        </p>
+        <div class="linea-inferior"></div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 3 - PUNTOS OBTENIDOS ===== */
+.puntos-obtenidos{
+    background:#010d1a;
+    padding:60px 20px 80px;
+}
+.card-puntos{
+    max-width:1100px;
+    margin:auto;
+    background:#111827;
+    border:1px solid rgba(57,232,170,0.15);
+    border-radius:30px;
+    padding:35px 40px 50px;
+    text-align:center;
+    box-shadow:
+        0 0 30px rgba(57,232,170,0.08);
+}
+/* LÍNEAS DECORATIVAS */
+.linea-superior,
+.linea-inferior{
+    width:50%;
+    height:1px;
+    background:rgba(255,255,255,0.7);
+    margin:auto;
+}
+.linea-superior{
+    margin-bottom:25px;
+}
+.linea-inferior{
+    margin-top:25px;
+}
+/* IMAGEN */
+.imagen-moneda{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:25px;
+    box-shadow:
+        0 0 20px rgba(57,232,170,0.15);
+}
+/* TÍTULO */
+.card-puntos h2{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+/* PUNTAJE */
+.puntaje-actual{
+    color:#ff1e1e;
+    font-size:86px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+/* DESCRIPCIÓN */
+.descripcion-puntos{
+    color:#d6d6d6;
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.6;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .card-puntos h2{
+        font-size:42px;
+    }
+    .puntaje-actual{
+        font-size:56px;
+    }
+    .imagen-moneda{
+        width:160px;
+        height:160px;
+    }
+    .descripcion-puntos{
+        font-size:16px;
+    }
+}
+
+
+Sección 4. Insignias y Trofeos
+Muestra las recompensas obtenidas durante el proceso de aprendizaje.
+•	Título: “Insignias”.
+•	Explica que cada logro desbloqueado representa el progreso y mantiene la motivación.
+•	Incluye cuatro reconocimientos:
+Detector de Fraudes
+•	Identifica señales de estafa en mensajes y llamadas.
+•	Imagen de una lupa sobre un escudo con símbolo monetario.
+Experto en Phishing
+•	Reconoce correos y enlaces falsos rápidamente.
+•	Imagen de un sobre con un anzuelo, relacionado con el phishing.
+Comerciante Seguro
+•	Promueve prácticas seguras al comprar y vender en línea.
+•	Imagen de una bolsa de compras con candado.
+Usuario Protegido
+•	Reconoce la importancia de proteger cuentas y datos personales.
+•	Imagen de un escudo con una figura de usuario.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 4 - INSIGNIAS Y TROFEOS -->
+<section class="insignias-section">
+    <div class="insignias-header">
+        <h2>Insignias</h2>
+        <p>
+            Cada logro desbloqueado muestra tu progreso y te mantiene motivado.
+        </p>
+    </div>
+    <div class="insignias-grid">
+        <!-- INSIGNIA 1 -->
+        <div class="insignia-card">
+            <img src="imagenes/detector-fraudes.png"
+                 alt="Detector de Fraudes">
+            <h3>
+                🏆 Detector de Fraudes
+            </h3>
+            <p>
+                Identifica señales de estafa en mensajes y llamadas.
+            </p>
+        </div>
+        <!-- INSIGNIA 2 -->
+        <div class="insignia-card">
+            <img src="imagenes/experto-phishing.png"
+                 alt="Experto en Phishing">
+            <h3>
+                🏆 Experto en Phishing
+            </h3>
+            <p>
+                Reconoce correos y enlaces falsos al instante.
+            </p>
+        </div>
+        <!-- INSIGNIA 3 -->
+        <div class="insignia-card">
+            <img src="imagenes/comerciante-seguro.png"
+                 alt="Comerciante Seguro">
+            <h3>
+                🏆 Comerciante Seguro
+            </h3>
+            <p>
+                Compra y vende en línea con prácticas seguras.
+            </p>
+        </div>
+        <!-- INSIGNIA 4 -->
+        <div class="insignia-card">
+            <img src="imagenes/usuario-protegido.png"
+                 alt="Usuario Protegido">
+            <h3>
+                🏆 Usuario Protegido
+            </h3>
+            <p>
+                Protege tus cuentas y datos personales.
+            </p>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 4 - INSIGNIAS ===== */
+.insignias-section{
+    background:#010d1a;
+    padding:70px 30px;
+}
+.insignias-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+.insignias-header h2{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+.insignias-header p{
+    color:#cfcfcf;
+    font-size:24px;
+}
+/* GRID */
+.insignias-grid{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+/* TARJETA */
+.insignia-card{
+    background:#111827;
+    border:1px solid rgba(57,232,170,0.18);
+    border-radius:22px;
+    text-align:center;
+    padding:35px 25px;
+    transition:.3s;
+}
+.insignia-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 0 25px rgba(57,232,170,.12);
+}
+.insignia-card img{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    margin-bottom:25px;
+}
+.insignia-card h3{
+    color:#ffffff;
+    font-size:22px;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+.insignia-card p{
+    color:#d0d0d0;
+    font-size:16px;
+    line-height:1.5;
+}
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .insignias-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .insignias-header h2{
+        font-size:44px;
+    }
+    .insignias-header p{
+        font-size:18px;
+    }
+    .insignias-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+Sección 5. Pie de página
+Incluye:
+•	Acacías CyberSafe.
+•	Correo: info@acaciascybersafe.com.
+•	Ubicación: Acacías, Colombia.
+•	Aviso legal: © 2026 Acacías CyberSafe. Todos los derechos reservados.
+La página refuerza la motivación del usuario mediante niveles, puntos, experiencia e insignias relacionadas con sus habilidades de ciberseguridad.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 5 - PIE DE PÁGINA -->
+<footer class="footer-logros">
+    <div class="footer-contenido">
+        <p class="footer-titulo">
+            Acacías CyberSafe © 2026
+        </p>
+        <p>
+            <a href="mailto:info@acaciascybersafe.com">
+                info@acaciascybersafe.com
+            </a>
+        </p>
+        <p>
+            Acacías, Colombia
+        </p>
+        <p class="footer-copy">
+            © 2026 Acacías CyberSafe. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 5 - PIE DE PÁGINA ===== */
+.footer-logros{
+    background:#010d1a;
+    padding:45px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+.footer-contenido{
+    max-width:1200px;
+    margin:auto;
+}
+.footer-titulo{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+.footer-logros p{
+    color:#ffffff;
+    font-size:16px;
+    margin:6px 0;
+}
+.footer-logros a{
+    color:#ffffff;
+    text-decoration:none;
+    transition:0.3s;
+}
+.footer-logros a:hover{
+    color:#39e8aa;
+}
+.footer-copy{
+    margin-top:22px !important;
+    color:#d9d9d9;
+    font-size:15px;
+}

@@ -1,0 +1,785 @@
+Código por cada sección de la página 2 “Bienvenida”	
+Página 2: “Bienvenida”
+Sección 1. Encabezado
+Es la navegación principal del sitio. Incluye:
+•	Logo de Acacías CyberSafe.
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+•	Acceso de usuario e inicio de sesión.
+•	Menú principal para visitar las distintas páginas del proyecto.
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<header class="header-cybersafe">
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="logo-acaciascybersafe.png" alt="Acacías CyberSafe">
+            <span>Acacías CyberSafe</span>
+        </div>
+
+        <!-- Acciones usuario -->
+        <div class="header-actions">
+
+            <a href="#inscripcion-cdx" class="btn-inscribete">
+                Inscríbete
+            </a>
+
+            <a href="#" class="icon-btn" title="Perfil">
+                👤
+            </a>
+
+            <a href="#" class="icon-btn" title="Carrito">
+                🛍️
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Menú Principal -->
+    <nav class="main-menu">
+
+        <a href="/">Inicio</a>
+
+        <a href="/bienvenida">Bienvenida</a>
+
+        <a href="/test-inicial">Test Inicial</a>
+
+        <a href="/aprendizaje">Aprendizaje</a>
+
+        <a href="/modulos-educativos">Módulos Educativos</a>
+
+        <a href="/simulador-amenazas">Simulador Amenazas</a>
+
+        <a href="/evaluacion-final">Evaluación Final</a>
+
+        <a href="/logros">Logros</a>
+
+        <a href="/evaluacion-usabilidad">Evaluación Usabilidad</a>
+
+        <a href="/resultados">Resultados</a>
+
+    </nav>
+
+</header>
+
+<style>
+
+/* ==================================
+   ENCABEZADO ACACÍAS CYBERSAFE
+================================== */
+
+.header-cybersafe{
+    background:#020b18;
+    width:100%;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* BARRA SUPERIOR */
+
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 30px;
+}
+
+/* LOGO */
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-container img{
+    height:42px;
+    width:auto;
+}
+
+.logo-container span{
+    color:#ffffff;
+    font-size:1.7rem;
+    font-weight:600;
+}
+
+/* BOTONES DERECHA */
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.btn-inscribete{
+    background:#36e6a0;
+    color:#04131d;
+    text-decoration:none;
+    padding:14px 38px;
+    border-radius:30px;
+    font-size:1.2rem;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-inscribete:hover{
+    background:#4df7b2;
+}
+
+.icon-btn{
+    text-decoration:none;
+    font-size:1.8rem;
+    color:#36e6a0;
+}
+
+/* MENÚ */
+
+.main-menu{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:14px 15px 20px;
+}
+
+.main-menu a{
+    color:#ffffff;
+    text-decoration:none;
+    padding:12px 18px;
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:10px;
+    font-size:1rem;
+    transition:.3s;
+    background:rgba(255,255,255,0.03);
+}
+
+.main-menu a:hover{
+    background:#36e6a0;
+    color:#04131d;
+    border-color:#36e6a0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .top-bar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .logo-container span{
+        font-size:1.3rem;
+    }
+
+    .main-menu{
+        gap:6px;
+    }
+
+    .main-menu a{
+        font-size:.9rem;
+        padding:10px 12px;
+    }
+
+}
+
+</style>
+
+Reemplazar
+Cambia:
+HTML
+<img src="logo-acaciascybersafe.png"
+
+por la URL de tu logo en Wix, por ejemplo:
+HTML
+<img src=https://static.wixstatic.com/media/logo_cybersafe.png
+
+Lenguaje de Programación: CSS
+.cart-container{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+.cart-count{
+    position:absolute;
+    top:-6px;
+    right:-10px;
+    background:#fff;
+    color:#000;
+    width:18px;
+    height:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    font-size:12px;
+    font-weight:bold;
+}
+
+ 
+Sección 2. Bienvenida y Explicación
+
+Presenta el propósito de la plataforma y orienta al visitante antes de comenzar.
+•	Título: “¡Bienvenido a Acacías CyberSafe!”
+•	Invita a participar en una experiencia de aprendizaje sobre seguridad digital.
+•	Explica que incluye:
+o	Módulos interactivos.
+o	Simulaciones.
+o	Actividades prácticas.
+o	Identificación de phishing.
+o	Prevención de suplantación de identidad.
+o	Detección de comprobantes de pago fraudulentos.
+o	Reconocimiento de otras formas de fraude digital.
+•	Describe el proyecto como un prototipo educativo para los habitantes de Acacías, Meta.
+•	Informa que el usuario encontrará contenidos, casos prácticos, simulaciones y evaluaciones.
+•	Explica que el recorrido ayuda a reconocer riesgos y adoptar hábitos seguros en internet.
+•	Incluye una imagen de estilo tecnológico, con edificios iluminados y escudos digitales.
+•	Finaliza indicando que el usuario debe seleccionar un perfil para personalizar su experiencia.
+
+
+Código Autor
+Lenguaje de Programación: HTML
+<section id="bienvenida" class="bienvenida-section">
+    <div class="bienvenida-container">
+        <div class="bienvenida-texto">
+            <h1>¡Bienvenido a Acacías CyberSafe!</h1>
+            <p class="intro">
+                Nos alegra que hagas parte de esta experiencia de aprendizaje diseñada
+                para ayudarte a navegar con mayor seguridad en el mundo digital.
+                A través de módulos interactivos, simulaciones y actividades prácticas,
+                podrás aprender a identificar amenazas como el phishing, la
+                suplantación de identidad, los comprobantes de pago fraudulentos y
+                otras modalidades de fraude digital.
+            </p>
+            <div class="linea-destacada"></div>
+            <p>
+                <strong>Acacías CyberSafe</strong> es un prototipo educativo
+                desarrollado para fortalecer los conocimientos y competencias
+                básicas en ciberseguridad de los habitantes del municipio de
+                Acacías, Meta.
+            </p>
+            <p>
+                Durante el recorrido encontrarás contenido formativo,
+                casos prácticos, simulaciones de situaciones reales y
+                evaluaciones que te permitirán reconocer riesgos digitales
+                y adoptar hábitos más seguros en línea.
+            </p>
+            <ul class="lista-beneficios">
+                <li>Módulos interactivos de aprendizaje.</li>
+                <li>Simulaciones de amenazas digitales.</li>
+                <li>Actividades prácticas de entrenamiento.</li>
+                <li>Identificación de phishing.</li>
+                <li>Prevención de suplantación de identidad.</li>
+                <li>Detección de comprobantes fraudulentos.</li>
+                <li>Reconocimiento de otras formas de fraude digital.</li>
+            </ul>
+            <p>
+                Antes de comenzar, selecciona el perfil que mejor te represente.
+                Esto permitirá personalizar tu experiencia de aprendizaje y
+                presentarte situaciones acordes con tu contexto.
+            </p>
+        </div>
+        <div class="bienvenida-imagen">
+            <img
+            src="https://static.wixstatic.com/media/ciudad-cybersafe.jpg"
+            alt="Ciudad tecnológica protegida por escudos digitales">
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   BIENVENIDA
+================================== */
+.bienvenida-section{
+    background:#020b18;
+    padding:60px 40px 100px;
+    color:#ffffff;
+}
+.bienvenida-container{
+    max-width:1400px;
+    margin:auto;
+}
+/* TÍTULO */
+.bienvenida-texto h1{
+    font-size:5rem;
+    font-weight:700;
+    line-height:1.1;
+    margin-bottom:50px;
+    color:#ffffff;
+}
+/* PRIMER TEXTO */
+.intro{
+    font-size:1.35rem;
+    line-height:1.6;
+    margin-bottom:35px;
+    color:#ffffff;
+}
+/* LÍNEA AZUL */
+.linea-destacada{
+    width:110px;
+    height:4px;
+    background:#1d7cff;
+    margin:35px 0;
+}
+/* PÁRRAFOS */
+.bienvenida-texto p{
+    font-size:1.2rem;
+    line-height:1.8;
+    color:#d8dbe2;
+    margin-bottom:30px;
+}
+/* LISTA */
+.lista-beneficios{
+    margin:20px 0 35px 25px;
+    color:white;
+}
+.lista-beneficios li{
+    margin-bottom:12px;
+    font-size:1.15rem;
+    line-height:1.6;
+}
+/* IMAGEN */
+.bienvenida-imagen{
+    margin-top:50px;
+}
+.bienvenida-imagen img{
+    width:100%;
+    max-width:760px;
+    border-radius:25px;
+    display:block;
+    object-fit:cover;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .bienvenida-texto h1{
+        font-size:3.2rem;
+    }
+    .intro{
+        font-size:1.1rem;
+    }
+    .bienvenida-texto p{
+        font-size:1rem;
+    }
+    .lista-beneficios li{
+        font-size:1rem;
+    }
+}
+
+
+Sección 3. Selección de Perfil
+Permite que cada visitante elija el perfil que mejor representa su contexto.
+•	Título: “Selección de perfil”.
+•	Explica que la selección permite mostrar situaciones y contenidos más adecuados para cada usuario.
+•	Presenta cuatro perfiles:
+o	Estudiante 🎓
+o	Comerciante 🏪
+o	Adulto Mayor 👴
+o	Trabajador Independiente 💼
+•	Cada perfil incluye un indicador de selección.
+•	Esta sección busca adaptar la formación en ciberseguridad a las necesidades de distintos grupos de la comunidad.
+Código Autor
+Lenguaje de Programación: HTML
+<section id="seleccion-perfil" class="perfil-section">
+    <div class="perfil-container">
+        <h2>Selección de perfil</h2>
+        <p class="perfil-descripcion">
+            Antes de comenzar, selecciona el perfil que mejor te represente.
+            Esto permitirá personalizar tu experiencia de aprendizaje y
+            presentarte situaciones acordes con tu contexto.
+        </p>
+        <div class="perfil-grid">
+            <!-- Estudiante -->
+            <label class="perfil-card">
+                <input
+                    type="radio"
+                    name="perfil"
+                    value="Estudiante">
+                <div class="perfil-icono">🎓</div>
+                <h3>Estudiante</h3>
+                <span class="checkmark">✓</span>
+            </label>
+            <!-- Comerciante -->
+            <label class="perfil-card">
+                <input
+                    type="radio"
+                    name="perfil"
+                    value="Comerciante">
+                <div class="perfil-icono">🏪</div>
+                <h3>Comerciante</h3>
+                <span class="checkmark">✓</span>
+            </label>
+            <!-- Adulto Mayor -->
+            <label class="perfil-card">
+                <input
+                    type="radio"
+                    name="perfil"
+                    value="Adulto Mayor">
+                <div class="perfil-icono">👴</div>
+                <h3>Adulto Mayor</h3>
+                <span class="checkmark">✓</span>
+            </label>
+            <!-- Trabajador Independiente -->
+            <label class="perfil-card">
+                <input
+                    type="radio"
+                    name="perfil"
+                    value="Trabajador Independiente">
+                <div class="perfil-icono">💼</div>
+                <h3>Trabajador<br>Independiente</h3>
+                <span class="checkmark">✓</span>
+            </label>
+        </div>
+        <div class="perfil-info">
+            <p>
+                La formación en ciberseguridad se adapta a las necesidades de
+                distintos grupos de la comunidad. Según el perfil seleccionado,
+                encontrarás ejemplos, casos prácticos y simulaciones más cercanas
+                a las situaciones que podrías enfrentar en tu vida diaria.
+            </p>
+        </div>
+        <div class="perfil-boton">
+            <a href="/test-inicial"
+               id="btnDiagnostico"
+               class="btn-diagnostico">
+                Iniciar Diagnóstico
+            </a>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   SELECCIÓN DE PERFIL
+================================== */
+.perfil-section{
+    background:#020b18;
+    padding:90px 40px 100px;
+    color:white;
+}
+.perfil-container{
+    max-width:1400px;
+    margin:auto;
+    text-align:center;
+}
+.perfil-container h2{
+    font-size:4.5rem;
+    font-weight:700;
+    margin-bottom:25px;
+}
+.perfil-descripcion{
+    max-width:950px;
+    margin:auto auto 60px;
+    font-size:1.4rem;
+    line-height:1.6;
+    color:#d8dbe2;
+}
+/* TARJETAS */
+.perfil-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-bottom:50px;
+}
+.perfil-card{
+    position:relative;
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:25px;
+    padding:50px 25px;
+    cursor:pointer;
+    transition:.3s ease;
+}
+.perfil-card:hover{
+    transform:translateY(-4px);
+    border-color:#36e6a0;
+}
+.perfil-card input{
+    display:none;
+}
+.perfil-icono{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+.perfil-card h3{
+    font-size:2rem;
+    color:white;
+    margin-bottom:25px;
+}
+/* INDICADOR */
+.checkmark{
+    width:34px;
+    height:34px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#36e6a0;
+    color:white;
+    border-radius:6px;
+    font-size:22px;
+    font-weight:bold;
+}
+/* TARJETA SELECCIONADA */
+.perfil-card input:checked ~ .checkmark{
+    background:#22c55e;
+}
+.perfil-info{
+    max-width:1000px;
+    margin:auto auto 40px;
+}
+.perfil-info p{
+    color:#d8dbe2;
+    font-size:1.2rem;
+    line-height:1.8;
+}
+/* BOTÓN */
+.btn-diagnostico{
+    display:inline-block;
+    padding:18px 50px;
+    background:#36e6a0;
+    color:#04131d;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:1.3rem;
+    font-weight:600;
+    transition:.3s;
+}
+.btn-diagnostico:hover{
+    background:#53f3b8;
+    transform:translateY(-2px);
+}
+/* RESPONSIVE */
+@media(max-width:1100px){
+    .perfil-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .perfil-grid{
+        grid-template-columns:1fr;
+    }
+    .perfil-container h2{
+        font-size:3rem;
+    }
+    .perfil-descripcion{
+        font-size:1.1rem;
+    }
+}
+
+
+Lenguaje de Programación: JavaScript (Recomendado)
+HTML
+<script>
+document
+.getElementById("btnDiagnostico")
+.addEventListener("click", function(e){
+    const perfil =
+    document.querySelector(
+        'input[name="perfil"]:checked'
+    );
+    if(!perfil){
+        e.preventDefault();
+        alert(
+            "Por favor selecciona un perfil antes de iniciar el diagnóstico."
+        );
+        return;
+    }
+    console.log(
+        "Perfil seleccionado:",
+        perfil.value
+    );
+});
+</script>
+
+
+
+Sección 4. Acceso al Diagnóstico
+Invita al usuario a iniciar su recorrido de evaluación.
+•	Título: “¿Listo para el desafío?”
+•	Incluye el botón “Iniciar Diagnóstico”.
+•	Su función es llevar al visitante al diagnóstico inicial para conocer sus conocimientos sobre seguridad digital.
+Código Autor
+Lenguaje de Programación: HTML
+<section id="acceso-diagnostico" class="desafio-section">
+    <div class="desafio-card">
+        <h2>
+            ¿Listo para el desafío?
+        </h2>
+        <a href="/test-inicial"
+           class="btn-diagnostico">
+           Iniciar Diagnóstico
+        </a>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   ACCESO AL DIAGNÓSTICO
+================================== */
+.desafio-section{
+    background:#020b18;
+    padding:80px 40px;
+}
+.desafio-card{
+    max-width:1100px;
+    margin:0 auto;
+    text-align:center;
+    padding:80px 40px;
+    border:1px solid #36e6a0;
+    border-radius:30px;
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+    );
+    position:relative;
+    overflow:hidden;
+}
+/* Efecto tecnológico */
+.desafio-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:
+    repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 80px,
+        rgba(54,230,160,0.03) 81px,
+        transparent 82px
+    );
+}
+/* TÍTULO */
+.desafio-card h2{
+    position:relative;
+    z-index:2;
+    color:white;
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:40px;
+}
+/* BOTÓN */
+.btn-diagnostico{
+    position:relative;
+    z-index:2;
+    display:inline-block;
+    padding:18px 50px;
+    background:#36e6a0;
+    color:#04131d;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:1.3rem;
+    font-weight:600;
+    transition:.3s;
+}
+.btn-diagnostico:hover{
+    background:#53f3b8;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px
+    rgba(54,230,160,.30);
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .desafio-card{
+        padding:60px 25px;
+    }
+    .desafio-card h2{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+}
+
+
+Sección 5. Pie de página
+Incluye la información institucional y de contacto:
+•	Acacías CyberSafe
+•	Correo: info@acaciascybersafe.com
+•	Ubicación: Acacías, Colombia
+•	Aviso legal: © 2026 Acacías CyberSafe. Todos los derechos reservados.
+Código Autor
+Lenguaje de Programación: HTML
+<footer id="footer-bienvenida" class="footer-section">
+    <div class="footer-container">
+        <p class="footer-proyecto">
+            Acacías CyberSafe © 2026
+        </p>
+        <p class="footer-contacto">
+            <a href="mailto:info@acaciascybersafe.com">
+                info@acaciascybersafe.com
+            </a>
+        </p>
+        <p class="footer-ubicacion">
+            Acacías, Colombia
+        </p>
+        <p class="footer-copy">
+            © 2026 Acacías CyberSafe. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+Lenguaje de Programación: CSS
+/* ==================================
+   PIE DE PÁGINA - BIENVENIDA
+================================== */
+.footer-section{
+    background:#020b18;
+    padding:70px 20px 40px;
+    text-align:center;
+    color:white;
+}
+.footer-container{
+    max-width:900px;
+    margin:auto;
+}
+.footer-proyecto{
+    font-size:1.8rem;
+    font-weight:600;
+    margin-bottom:10px;
+    color:white;
+}
+.footer-contacto{
+    margin-bottom:8px;
+}
+.footer-contacto a{
+    color:white;
+    text-decoration:none;
+    font-size:1.4rem;
+    transition:.3s;
+}
+.footer-contacto a:hover{
+    color:#36e6a0;
+}
+.footer-ubicacion{
+    font-size:1.4rem;
+    margin-bottom:45px;
+    color:white;
+}
+.footer-copy{
+    font-size:1.25rem;
+    color:white;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .footer-proyecto{
+        font-size:1.4rem;
+    }
+    .footer-contacto a{
+        font-size:1.1rem;
+    }
+    .footer-ubicacion{
+        font-size:1.1rem;
+    }
+    .footer-copy{
+        font-size:1rem;
+    }
+}
+

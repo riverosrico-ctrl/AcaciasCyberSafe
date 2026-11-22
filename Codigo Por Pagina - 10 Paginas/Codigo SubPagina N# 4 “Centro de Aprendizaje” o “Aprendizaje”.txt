@@ -1,0 +1,566 @@
+Código por cada sección de la página 4 “Centro de Aprendizaje” o “Aprendizaje”	
+
+Página 4: “Centro de Aprendizaje” o “Aprendizaje”
+
+Sección 1. Encabezado
+Incluye:
+•	Logo de Acacías CyberSafe.
+•	Menú principal.
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+•	Acceso de usuario e inicio de sesión.
+
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<div class="cart-container">
+    <a href="/carrito"
+       class="icon-btn"
+       title="Carrito">
+        🛒
+    </a>
+    <span class="cart-count">
+        0
+    </span>
+</div>
+Lenguaje de Programación: CSS
+.cart-container{
+    position:relative;
+}
+.cart-count{
+    position:absolute;
+    top:-6px;
+    right:-10px;
+    width:18px;
+    height:18px;
+    background:white;
+    color:black;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    font-weight:bold;
+}
+
+
+Sección 2. Intro del Centro de Aprendizaje
+Presenta el propósito principal de la página.
+•	Texto introductorio: “Panel principal de módulos”.
+•	Título: “Centro de Aprendizaje”.
+•	Mensaje: “Domina la seguridad digital con nuestros módulos guiados.”
+•	Botón “Explorar módulos”.
+•	Imagen tecnológica de un escudo azul con un candado, relacionada con la protección digital.
+Esta sección invita al usuario a comenzar su formación en ciberseguridad.
+Código Autor:
+Lenguaje de Programación: HTML
+<section id="centro-aprendizaje" class="aprendizaje-hero">
+    <div class="aprendizaje-container">
+        <!-- Columna izquierda -->
+        <div class="aprendizaje-contenido">
+            <span class="aprendizaje-etiqueta">
+                PANEL PRINCIPAL DE MÓDULOS
+            </span>
+            <h1>
+                Centro de
+                <br>
+                Aprendizaje
+            </h1>
+            <p>
+                Domina la seguridad digital con nuestros módulos guiados.
+            </p>
+            <a href="/modulos-educativos"
+               class="btn-explorar">
+                Explorar módulos
+            </a>
+        </div>
+        <!-- Columna derecha -->
+        <div class="aprendizaje-imagen">
+            <img
+            src="https://static.wixstatic.com/media/escudo-cyber.jpg"
+            alt="Escudo digital con candado de seguridad">
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   CENTRO DE APRENDIZAJE
+================================== */
+.aprendizaje-hero{
+    background:#020b18;
+    padding:90px 40px;
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+}
+.aprendizaje-container{
+    max-width:1400px;
+    width:100%;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+/* ETIQUETA */
+.aprendizaje-etiqueta{
+    display:block;
+    color:#36e6a0;
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:3px;
+    margin-bottom:25px;
+}
+/* TITULO */
+.aprendizaje-contenido h1{
+    color:#ffffff;
+    font-size:6rem;
+    line-height:1;
+    font-weight:700;
+    margin-bottom:30px;
+}
+/* TEXTO */
+.aprendizaje-contenido p{
+    color:#cfd6df;
+    font-size:1.8rem;
+    line-height:1.5;
+    margin-bottom:35px;
+}
+/* BOTON */
+.btn-explorar{
+    display:inline-block;
+    background:#36e6a0;
+    color:#04131d;
+    text-decoration:none;
+    padding:18px 35px;
+    border-radius:40px;
+    font-size:1.3rem;
+    font-weight:600;
+    transition:.3s;
+}
+.btn-explorar:hover{
+    background:#4ef6b4;
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(54,230,160,.25);
+}
+/* IMAGEN */
+.aprendizaje-imagen{
+    display:flex;
+    justify-content:center;
+}
+.aprendizaje-imagen img{
+    width:100%;
+    max-width:650px;
+    border-radius:30px;
+    object-fit:cover;
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .aprendizaje-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+    .aprendizaje-contenido h1{
+        font-size:4rem;
+    }
+    .aprendizaje-contenido p{
+        font-size:1.3rem;
+    }
+}
+@media(max-width:768px){
+    .aprendizaje-hero{
+        padding:60px 20px;
+    }
+    .aprendizaje-contenido h1{
+        font-size:3rem;
+    }
+    .aprendizaje-contenido p{
+        font-size:1.1rem;
+    }
+    .btn-explorar{
+        width:100%;
+        max-width:280px;
+    }
+}
+
+
+Sección 3. Módulos de Aprendizaje
+Funciona como el panel principal para mostrar los módulos disponibles.
+•	Título: “Centro de Aprendizaje”.
+•	Texto: “Panel principal con tarjetas de módulos.”
+•	Incluye un repetidor diseñado para mostrar cada módulo mediante tarjetas.
+•	Cada tarjeta contiene:
+o	Una imagen.
+o	Un título.
+o	Una descripción.
+o	El botón “Explorar”.
+Actualmente, los textos de las tarjetas aparecen como “Lorem Ipsum”, por lo que funcionan como contenido provisional y todavía deben reemplazarse por los nombres y descripciones reales de los módulos.
+Código Autor
+Lenguaje de Programación: HTML
+<section id="modulos-aprendizaje" class="modulos-section">
+    <div class="modulos-container">
+        <h2>Centro de Aprendizaje</h2>
+        <p class="modulos-subtitulo">
+            Panel principal con tarjetas de módulos.
+        </p>
+        <div class="modulos-grid">
+            <div class="modulo-card">
+                <img src="img/modulo1.jpg" alt="Seguridad Digital y Autocuidado">
+                <h3>Seguridad Digital y Autocuidado</h3>
+                <p>
+                    Principios básicos para proteger tus datos y tu identidad en internet.
+                </p>
+                <a href="/modulo-seguridad-digital" class="btn-modulo">
+                    Explorar
+                </a>
+            </div>
+            <div class="modulo-card">
+                <img src="img/modulo2.jpg" alt="Phishing y Enlaces Fraudulentos">
+                <h3>Phishing y Enlaces Fraudulentos</h3>
+                <p>
+                    Cómo identificar correos, mensajes y sitios web diseñados para robar tus datos.
+                </p>
+                <a href="/modulo-phishing" class="btn-modulo">
+                    Explorar
+                </a>
+            </div>
+            <div class="modulo-card">
+                <img src="img/modulo3.jpg" alt="Mensajería Segura">
+                <h3>Mensajería Segura</h3>
+                <p>
+                    Buenas prácticas para conversar y compartir archivos de forma privada.
+                </p>
+                <a href="/modulo-mensajeria" class="btn-modulo">
+                    Explorar
+                </a>
+            </div>
+            <div class="modulo-card">
+                <img src="img/modulo4.jpg" alt="Suplantación de Identidad">
+                <h3>Suplantación de Identidad</h3>
+                <p>
+                    Reconoce a quienes se hacen pasar por bancos, empresas o conocidos.
+                </p>
+                <a href="/modulo-suplantacion" class="btn-modulo">
+                    Explorar
+                </a>
+            </div>
+            <div class="modulo-card">
+                <img src="img/modulo5.jpg" alt="Contraseñas y 2FA">
+                <h3>Contraseñas y 2FA</h3>
+                <p>
+                    Cómo crear contraseñas robustas y activar la autenticación de dos factores.
+                </p>
+                <a href="/modulo-contrasenas" class="btn-modulo">
+                    Explorar
+                </a>
+            </div>
+            <div class="modulo-card">
+                <img src="img/modulo6.jpg" alt="Compras Electrónicas">
+                <h3>Compras Electrónicas</h3>
+                <p>
+                    Pautas para comprar en línea sin caer en tiendas falsas ni cobros indebidos.
+                </p>
+                <a href="/modulo-compras" class="btn-modulo">
+                    Explorar
+                </a>
+            </div>
+            <div class="modulo-card">
+                <img src="img/modulo7.jpg" alt="Redes Sociales">
+                <h3>Redes Sociales</h3>
+                <p>
+                    Protege tu privacidad y evita estafas en plataformas sociales.
+                </p>
+                <a href="/modulo-redes-sociales" class="btn-modulo">
+                    Explorar
+                </a>
+            </div>
+            <div class="modulo-card">
+                <img src="img/modulo8.jpg" alt="Cultura Preventiva">
+                <h3>Cultura Preventiva</h3>
+                <p>
+                    Integra la prevención de fraudes en la rutina personal y organizacional.
+                </p>
+                <a href="/modulo-cultura-preventiva" class="btn-modulo">
+                    Explorar
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+Lenguaje de Programación: CSS
+/* ==================================
+   CENTRO DE APRENDIZAJE
+================================== */
+.modulos-section{
+    background:#020b18;
+    padding:80px 40px;
+}
+.modulos-container{
+    max-width:1400px;
+    margin:auto;
+}
+.modulos-container h2{
+    color:white;
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:10px;
+}
+.modulos-subtitulo{
+    color:#cfd6df;
+    font-size:1.4rem;
+    margin-bottom:35px;
+}
+/* GRID */
+.modulos-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+/* TARJETAS */
+.modulo-card{
+    background:#121a26;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+.modulo-card:hover{
+    transform:translateY(-4px);
+    border-color:#36e6a0;
+    box-shadow:0 10px 20px rgba(54,230,160,.12);
+}
+.modulo-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    padding:18px;
+    border-radius:30px;
+}
+.modulo-card h3{
+    color:white;
+    font-size:1.1rem;
+    font-weight:700;
+    padding:0 20px;
+    margin-bottom:10px;
+}
+.modulo-card p{
+    color:#cfd6df;
+    padding:0 20px;
+    line-height:1.5;
+    min-height:95px;
+    font-size:1rem;
+}
+.btn-modulo{
+    display:block;
+    text-align:center;
+    padding:20px;
+    color:#36e6a0;
+    text-decoration:underline;
+    font-size:1.1rem;
+    font-weight:600;
+}
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .modulos-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .modulos-grid{
+        grid-template-columns:1fr;
+    }
+    .modulos-container h2{
+        font-size:2.8rem;
+    }
+}
+
+
+Sección 4. Comunidad y Soporte
+Ofrece una vía de acompañamiento para los usuarios.
+•	Título: “¿Tienes preguntas?”
+•	Texto sobre unirse a la comunidad para:
+o	Resolver dudas sobre los módulos.
+o	Compartir experiencias.
+o	Aprender sobre prevención de fraudes digitales.
+•	Botón “Unirse a la Comunidad”.
+Esta sección busca mantener al usuario acompañado durante su proceso de aprendizaje.
+Código Autor:
+Lenguaje de Programación: HMTL
+<section id="comunidad-soporte" class="comunidad-section">
+    <div class="comunidad-card">
+        <h2>
+            ¿Tienes preguntas?
+        </h2>
+        <p class="comunidad-texto">
+            Únete a nuestra comunidad para resolver tus dudas sobre los
+            módulos y compartir experiencias de prevención de fraudes digitales.
+        </p>
+        <a href="/comunidad-cybersafe"
+           class="btn-comunidad">
+            Unirse a la Comunidad
+        </a>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   COMUNIDAD Y SOPORTE
+================================== */
+.comunidad-section{
+    background:#020b18;
+    padding:90px 40px;
+}
+.comunidad-card{
+    max-width:1100px;
+    margin:0 auto;
+    background:#d7dee9;
+    border-radius:30px;
+    padding:70px 50px;
+    text-align:center;
+}
+/* TÍTULO */
+.comunidad-card h2{
+    color:#04131d;
+    font-size:3.5rem;
+    font-weight:700;
+    margin-bottom:25px;
+}
+/* TEXTO */
+.comunidad-texto{
+    color:#334155;
+    font-size:1.35rem;
+    line-height:1.7;
+    max-width:700px;
+    margin:0 auto 35px;
+}
+/* BOTÓN */
+.btn-comunidad{
+    display:inline-block;
+    background:#36e6a0;
+    color:#04131d;
+    text-decoration:none;
+    padding:18px 40px;
+    border-radius:40px;
+    font-size:1.2rem;
+    font-weight:600;
+    transition:.3s;
+}
+.btn-comunidad:hover{
+    background:#4df6b4;
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(54,230,160,.25);
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .comunidad-section{
+        padding:60px 20px;
+    }
+    .comunidad-card{
+        padding:40px 25px;
+    }
+    .comunidad-card h2{
+        font-size:2.3rem;
+    }
+    .comunidad-texto{
+        font-size:1rem;
+    }
+    .btn-comunidad{
+        width:100%;
+        max-width:320px;
+    }
+}
+
+
+Sección 5. Pie de página
+Incluye:
+•	Acacías CyberSafe.
+•	Correo: info@acaciascybersafe.com.
+•	Ubicación: Acacías, Colombia.
+•	Aviso legal: © 2026 Acacías CyberSafe. Todos los derechos reservados.
+La página organiza el acceso a la formación digital mediante una introducción, un panel de módulos y un espacio de apoyo comunitario. El siguiente ajuste más importante sería reemplazar los textos provisionales “Lorem Ipsum” por el contenido real de cada módulo.
+Código Autor
+Lenguaje de Programación: HTML
+<footer id="footer-aprendizaje" class="footer-section">
+    <div class="footer-container">
+        <p class="footer-proyecto">
+            Acacías CyberSafe © 2026
+        </p>
+        <p class="footer-contacto">
+            <a href="mailto:info@acaciascybersafe.com">
+                info@acaciascybersafe.com
+            </a>
+        </p>
+        <p class="footer-ubicacion">
+            Acacías, Colombia
+        </p>
+        <p class="footer-copy">
+            © 2026 Acacías CyberSafe.
+            Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   PIE DE PÁGINA - APRENDIZAJE
+================================== */
+.footer-section{
+    background:#020b18;
+    padding:80px 20px 40px;
+    text-align:center;
+    color:#ffffff;
+}
+.footer-container{
+    max-width:900px;
+    margin:0 auto;
+}
+/* Proyecto */
+.footer-proyecto{
+    font-size:1.8rem;
+    font-weight:600;
+    margin-bottom:8px;
+    color:#ffffff;
+}
+/* Correo */
+.footer-contacto{
+    margin-bottom:6px;
+}
+.footer-contacto a{
+    color:#ffffff;
+    font-size:1.4rem;
+    text-decoration:none;
+    transition:.3s;
+}
+.footer-contacto a:hover{
+    color:#36e6a0;
+}
+/* Ubicación */
+.footer-ubicacion{
+    color:#ffffff;
+    font-size:1.4rem;
+    margin-bottom:45px;
+}
+/* Copyright */
+.footer-copy{
+    color:#ffffff;
+    font-size:1.2rem;
+}
+/* Responsive */
+@media(max-width:768px){
+    .footer-proyecto{
+        font-size:1.4rem;
+    }
+    .footer-contacto a{
+        font-size:1.1rem;
+    }
+    .footer-ubicacion{
+        font-size:1.1rem;
+    }
+    .footer-copy{
+        font-size:1rem;
+    }
+}
+

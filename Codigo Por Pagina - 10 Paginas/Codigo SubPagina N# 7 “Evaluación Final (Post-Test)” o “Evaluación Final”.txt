@@ -1,0 +1,634 @@
+Código por cada sección de la página 7 “Evaluación Final (Post-Test)” o “Evaluación Final”
+
+Página 7: “Evaluación Final” o “Post-Test”
+
+Sección 1. Encabezado
+
+Incluye:
+•	Logo de Acacías CyberSafe.
+•	Menú principal.
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+•	Acceso de usuario e inicio de sesión.
+
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<!-- SECCIÓN 1 - ENCABEZADO -->
+<header class="top-header">
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="imagenes/logo-acacias-cybersafe.png"
+             alt="Logo Acacías CyberSafe">
+        <span>Acacías CyberSafe</span>
+    </div>
+    <!-- ACCIONES -->
+    <div class="header-actions">
+        <a href="#inscripcion" class="btn-inscribete">
+            Inscríbete
+        </a>
+        <a href="#usuario" class="icon-btn">
+            👤
+        </a>
+        <a href="#carrito" class="icon-btn">
+            🛒
+        </a>
+    </div>
+</header>
+<!-- MENÚ PRINCIPAL -->
+<nav class="menu-principal">
+    <a href="index.html">Inicio</a>
+    <a href="bienvenida.html">Bienvenida</a>
+    <a href="test-inicial.html">Test Inicial</a>
+    <a href="aprendizaje.html">Aprendizaje</a>
+    <a href="modulos-educativos.html">Módulos Educativos</a>
+    <a href="simulador.html">Simulador Amenazas</a>
+    <!-- PÁGINA 7 ACTIVA -->
+    <a href="evaluacion-final.html" class="active">
+        Evaluación Final
+    </a>
+    <a href="logros.html">Logros</a>
+    <a href="evaluacion-usabilidad.html">
+        Evaluación Usabilidad
+    </a>
+    <a href="resultados.html">Resultados</a>
+</nav>
+
+Lenguaje de Programación: CSS
+/* ===== ENCABEZADO ===== */
+.top-header{
+    background:#020c18;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 35px;
+}
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo-container img{
+    width:42px;
+    height:auto;
+}
+.logo-container span{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+}
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.btn-inscribete{
+    background:#39e8aa;
+    color:#000;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn-inscribete:hover{
+    background:#25d79a;
+}
+.icon-btn{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:26px;
+}
+/* ===== MENÚ ===== */
+.menu-principal{
+    background:#020c18;
+    padding:12px 0;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+}
+.menu-principal a{
+    color:#ffffff;
+    text-decoration:none;
+    padding:12px 18px;
+    border:1px solid rgba(255,255,255,0.20);
+    border-radius:8px;
+    background:#121826;
+    transition:0.3s;
+    font-size:14px;
+}
+.menu-principal a:hover{
+    background:#213f7a;
+}
+.menu-principal a.active{
+    background:#1e40af;
+    border-color:#3b82f6;
+}
+
+
+Sección 2. Introducción al Post-Test
+Presenta la evaluación final del proceso formativo.
+•	Título: “Evaluación Final (Post-Test)”.
+•	Felicita al usuario por llegar a la etapa final.
+•	Evalúa los conocimientos adquiridos en los módulos educativos.
+•	Incluye temas como:
+o	Phishing.
+o	Suplantación de identidad.
+o	Contraseñas seguras.
+o	Protección de datos personales.
+o	Comprobantes de pago fraudulentos.
+o	Buenas prácticas de ciberseguridad.
+•	Permite comparar los resultados con el Diagnóstico Inicial (Pre-Test).
+•	Ayuda a identificar los avances y el aprendizaje alcanzado.
+Código Autor
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 2 - INTRODUCCIÓN AL POST-TEST -->
+<section class="posttest-banner">
+    <div class="posttest-overlay">
+        <h1>Evaluación Final (Post-Test)</h1>
+        <h2>
+            ¡Has llegado a la etapa final de tu proceso de aprendizaje
+            en Acacías CyberSafe! 🎉
+        </h2>
+        <p class="texto-principal">
+            En esta sección encontrarás una evaluación diseñada para medir los
+            conocimientos adquiridos durante tu recorrido por los diferentes
+            módulos educativos de la plataforma. A través de preguntas
+            relacionadas con phishing, suplantación de identidad, contraseñas
+            seguras, protección de datos personales, comprobantes de pago
+            fraudulentos y buenas prácticas de ciberseguridad, podrás demostrar
+            lo aprendido y reflexionar sobre las habilidades desarrolladas.
+        </p>
+        <p class="texto-secundario">
+            El propósito de este Post-Test es comparar tus resultados con los
+            obtenidos en el Diagnóstico Inicial (Pre-Test), permitiendo
+            identificar cambios en tu nivel de conocimiento y evidenciar el
+            aprendizaje alcanzado después de interactuar con los contenidos,
+            simulaciones y actividades de Acacías CyberSafe.
+        </p>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 2 - INTRODUCCIÓN AL POST-TEST ===== */
+.posttest-banner{
+    width:95%;
+    max-width:1280px;
+    min-height:650px;
+    margin:40px auto;
+    border-radius:25px;
+    overflow:hidden;
+    background-image:
+    linear-gradient(
+        rgba(20, 29, 43, 0.72),
+        rgba(20, 29, 43, 0.72)
+    ),
+    url("imagenes/evaluacion-final-bg.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.posttest-overlay{
+    width:85%;
+    text-align:center;
+    padding:60px 40px;
+}
+.posttest-overlay h1{
+    color:#ffffff;
+    font-size:78px;
+    font-weight:700;
+    margin-bottom:40px;
+    line-height:1.1;
+}
+.posttest-overlay h2{
+    color:#35e7ac;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:45px;
+}
+.texto-principal{
+    color:#ffffff;
+    font-size:23px;
+    line-height:1.6;
+    max-width:980px;
+    margin:0 auto 40px auto;
+}
+.texto-secundario{
+    color:#d2d2d2;
+    font-size:20px;
+    line-height:1.6;
+    max-width:980px;
+    margin:0 auto;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .posttest-overlay h1{
+        font-size:50px;
+    }
+    .posttest-overlay h2{
+        font-size:22px;
+    }
+    .texto-principal,
+    .texto-secundario{
+        font-size:18px;
+    }
+}
+@media(max-width:768px){
+    .posttest-overlay{
+        width:95%;
+        padding:40px 20px;
+    }
+    .posttest-overlay h1{
+        font-size:38px;
+    }
+    .posttest-overlay h2{
+        font-size:20px;
+    }
+}
+
+
+Sección 3. Instrucciones y Beneficios
+Explica la utilidad y el funcionamiento de la evaluación.
+•	Título: “Detalles de la evaluación”.
+•	Beneficios:
+o	Valorar los conocimientos adquiridos.
+o	Identificar avances en el reconocimiento de amenazas.
+o	Medir el fortalecimiento de competencias básicas en ciberseguridad.
+o	Evaluar la efectividad educativa del prototipo.
+o	Contribuir a la validación académica de Acacías CyberSafe.
+•	Instrucciones:
+o	Leer cuidadosamente cada pregunta.
+o	Seleccionar la opción correcta.
+o	Responder con base en lo aprendido.
+o	Completar la prueba de manera continua.
+•	Duración estimada: 10 a 15 minutos.
+•	Número de preguntas: 10 preguntas de selección múltiple.
+•	No hay límite de tiempo.
+Código Autor
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 3 - DETALLES DE LA EVALUACIÓN -->
+<section class="detalles-evaluacion">
+    <div class="contenedor-detalles">
+        <h2>Detalles de la evaluación</h2>
+        <!-- TARJETA BENEFICIOS -->
+        <div class="card-evaluacion">
+            <h3>🛡️ ¿Para qué sirve esta evaluación?</h3>
+            <ul>
+                <li>✅ Valorar los conocimientos adquiridos durante el proceso formativo.</li>
+                <li>✅ Identificar avances en la capacidad de reconocer amenazas digitales.</li>
+                <li>✅ Medir el fortalecimiento de competencias básicas en ciberseguridad.</li>
+                <li>✅ Obtener información para evaluar la efectividad educativa del prototipo.</li>
+                <li>✅ Contribuir a la validación académica del proyecto Acacías CyberSafe.</li>
+            </ul>
+        </div>
+        <!-- TARJETA INSTRUCCIONES -->
+        <div class="card-evaluacion">
+            <h3>📋 Instrucciones:</h3>
+            <ol>
+                <li>Lee cuidadosamente cada pregunta antes de responder.</li>
+                <li>Selecciona la opción que consideres correcta.</li>
+                <li>Responde de acuerdo con los conocimientos adquiridos durante los módulos.</li>
+                <li>No hay límite de tiempo, pero se recomienda completar la evaluación de manera continua.</li>
+            </ol>
+            <div class="informacion-adicional">
+                <p>
+                    ⏱️ <strong>Duración estimada:</strong>
+                    10 a 15 minutos.
+                </p>
+                <p>
+                    📝 <strong>Número de preguntas:</strong>
+                    10 preguntas de selección múltiple.
+                </p>
+                <p>
+                    ✅ <strong>Tiempo:</strong>
+                    No existe límite de tiempo para responder.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 3 - DETALLES DE LA EVALUACIÓN ===== */
+.detalles-evaluacion{
+    background:#020c18;
+    padding:70px 20px;
+}
+.contenedor-detalles{
+    max-width:1100px;
+    margin:auto;
+}
+.detalles-evaluacion h2{
+    text-align:center;
+    color:white;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:45px;
+}
+/* TARJETAS */
+.card-evaluacion{
+    background:#111827;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:35px 45px;
+    margin-bottom:25px;
+}
+.card-evaluacion h3{
+    color:#39e8aa;
+    font-size:26px;
+    margin-bottom:20px;
+}
+.card-evaluacion ul{
+    margin-left:25px;
+}
+.card-evaluacion ul li{
+    color:white;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:8px;
+}
+.card-evaluacion ol{
+    color:white;
+    font-size:18px;
+    line-height:1.8;
+    padding-left:32px;
+}
+.informacion-adicional{
+    margin-top:25px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,0.12);
+}
+.informacion-adicional p{
+    color:#d8d8d8;
+    font-size:20px;
+    margin:12px 0;
+}
+.informacion-adicional strong{
+    color:#ffffff;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .detalles-evaluacion h2{
+        font-size:42px;
+    }
+    .card-evaluacion{
+        padding:25px;
+    }
+    .card-evaluacion h3{
+        font-size:22px;
+    }
+    .card-evaluacion ul li,
+    .card-evaluacion ol,
+    .informacion-adicional p{
+        font-size:16px;
+    }
+}
+
+
+Sección 4. Acceso a la Evaluación
+Invita al usuario a comenzar el Post-Test.
+•	Título: “Evaluación Final”.
+•	Repite la duración y el número de preguntas.
+•	Botón “Acceder a Microsoft Forms”.
+•	Incluye una imagen de un escudo digital junto a elementos de protección y análisis de datos.
+El botón dirige al formulario externo donde se responde la evaluación final.
+Código Autor
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 4 - ACCESO A LA EVALUACIÓN -->
+<section class="acceso-evaluacion">
+    <div class="contenedor-evaluacion">
+        <!-- INFORMACIÓN -->
+        <div class="info-evaluacion">
+            <h2>Evaluación Final</h2>
+            <ul class="datos-evaluacion">
+                <li>
+                    ⏱️ Duración estimada: 10 a 15 minutos.
+                </li>
+                <li>
+                    📝 Número de preguntas: 10 preguntas de selección múltiple.
+                </li>
+            </ul>
+            <a href="https://forms.office.com/"
+               target="_blank"
+               class="btn-forms">
+                Acceder a Microsoft Forms
+            </a>
+        </div>
+        <!-- IMAGEN -->
+        <div class="imagen-evaluacion">
+            <img src="imagenes/evaluacion-final-escudo.jpg"
+                 alt="Escudo digital de protección">
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 4 - ACCESO A LA EVALUACIÓN ===== */
+.acceso-evaluacion{
+    background:#0b1220;
+    padding:80px 40px;
+}
+.contenedor-evaluacion{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+}
+.info-evaluacion{
+    flex:1;
+}
+.info-evaluacion h2{
+    color:#ffffff;
+    font-size:58px;
+    font-weight:700;
+    margin-bottom:40px;
+}
+.datos-evaluacion{
+    list-style:none;
+    padding:0;
+    margin-bottom:50px;
+}
+.datos-evaluacion li{
+    color:#d6d6d6;
+    font-size:24px;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+/* BOTÓN */
+.btn-forms{
+    display:inline-block;
+    background:#39e8aa;
+    color:#000000;
+    text-decoration:none;
+    padding:22px 40px;
+    min-width:330px;
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    border-radius:14px;
+    transition:0.3s;
+}
+.btn-forms:hover{
+    background:#25d79a;
+    transform:translateY(-3px);
+}
+/* IMAGEN */
+.imagen-evaluacion{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+.imagen-evaluacion img{
+    width:100%;
+    max-width:700px;
+    border-radius:25px;
+    object-fit:cover;
+    box-shadow:0 8px 25px rgba(0,0,0,0.35);
+}
+/* RESPONSIVE */
+@media (max-width:992px){
+    .contenedor-evaluacion{
+        flex-direction:column;
+        text-align:center;
+    }
+    .info-evaluacion h2{
+        font-size:42px;
+    }
+    .datos-evaluacion li{
+        font-size:18px;
+    }
+    .btn-forms{
+        min-width:auto;
+        width:100%;
+    }
+}
+
+
+Sección 5. Mensaje de Cierre de Aprendizaje
+Refuerza la importancia de lo aprendido.
+•	Recuerda que cada conocimiento adquirido ayuda a proteger la información personal.
+•	Motiva al usuario a actuar de forma segura en el mundo digital.
+•	Mensaje final: “¡Demuestra todo lo que has aprendido!”
+Código Autor
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 5 - MENSAJE DE CIERRE DE APRENDIZAJE -->
+<section class="cierre-aprendizaje">
+    <div class="contenedor-cierre">
+        <h2>
+            Recuerda: cada conocimiento adquirido representa una herramienta más
+            para proteger tu información y actuar de manera segura en el mundo digital.
+        </h2>
+        <p>
+            ¡Demuestra todo lo que has aprendido!
+        </p>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 5 - MENSAJE DE CIERRE ===== */
+.cierre-aprendizaje{
+    background:#010d1a;
+    padding:80px 20px;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+.contenedor-cierre{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+.contenedor-cierre h2{
+    color:#ffffff;
+    font-size:34px;
+    font-weight:700;
+    line-height:1.3;
+    margin-bottom:40px;
+}
+.contenedor-cierre p{
+    color:#d6d6d6;
+    font-size:20px;
+    line-height:1.6;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .contenedor-cierre h2{
+        font-size:26px;
+    }
+    .contenedor-cierre p{
+        font-size:18px;
+    }
+}
+
+
+Sección 6. Pie de página
+Incluye:
+•	Acacías CyberSafe.
+•	Correo: info@acaciascybersafe.com.
+•	Ubicación: Acacías, Colombia.
+•	Aviso legal: © 2026 Acacías CyberSafe. Todos los derechos reservados.
+La página mide los conocimientos obtenidos, compara el progreso frente al diagnóstico inicial y dirige al usuario al formulario de evaluación final.
+
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 6 - PIE DE PÁGINA -->
+<footer class="footer-posttest">
+    <div class="footer-contenido">
+        <p class="footer-titulo">
+            Acacías CyberSafe © 2026
+        </p>
+        <p>
+            <a href="mailto:info@acaciascybersafe.com">
+                info@acaciascybersafe.com
+            </a>
+        </p>
+        <p>
+            Acacías, Colombia
+        </p>
+        <p class="footer-copy">
+            © 2026 Acacías CyberSafe. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 6 - PIE DE PÁGINA ===== */
+.footer-posttest{
+    background:#010d1a;
+    padding:45px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+.footer-contenido{
+    max-width:1200px;
+    margin:auto;
+}
+.footer-titulo{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+.footer-posttest p{
+    color:#ffffff;
+    font-size:16px;
+    margin:6px 0;
+}
+.footer-posttest a{
+    color:#ffffff;
+    text-decoration:none;
+}
+.footer-posttest a:hover{
+    color:#39e8aa;
+}
+.footer-copy{
+    margin-top:22px !important;
+    color:#d9d9d9;
+    font-size:15px;
+}
+

@@ -1,0 +1,534 @@
+Código por cada sección de la página 9 “Evaluación de Usabilidad” o “Evaluación Usabilidad”
+
+Página 9: “Evaluación de Usabilidad”
+
+Sección 1. Encabezado
+
+Incluye:
+•	Logo de Acacías CyberSafe.
+•	Menú principal.
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+•	Acceso de usuario e inicio de sesión.
+
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<!-- SECCIÓN 1 - ENCABEZADO -->
+<header class="top-header">
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="imagenes/logo-acacias-cybersafe.png"
+             alt="Logo Acacías CyberSafe">
+        <span>Acacías CyberSafe</span>
+    </div>
+    <!-- ACCIONES DEL USUARIO -->
+    <div class="header-actions">
+        <a href="#inscripcion" class="btn-inscribete">
+            Inscríbete
+        </a>
+        <a href="#usuario" class="icon-btn">
+            👤
+        </a>
+        <a href="#carrito" class="icon-btn">
+            🛒
+        </a>
+    </div>
+</header>
+<!-- MENÚ PRINCIPAL -->
+<nav class="menu-principal">
+    <a href="index.html">Inicio</a>
+    <a href="bienvenida.html">Bienvenida</a>
+    <a href="test-inicial.html">Test Inicial</a>
+    <a href="aprendizaje.html">Aprendizaje</a>
+    <a href="modulos-educativos.html">Módulos Educativos</a>
+    <a href="simulador.html">Simulador Amenazas</a>
+    <a href="evaluacion-final.html">Evaluación Final</a>
+    <a href="logros.html">Logros</a>
+    <!-- PÁGINA ACTIVA -->
+    <a href="evaluacion-usabilidad.html" class="active">
+        Evaluación Usabilidad
+    </a>
+    <a href="resultados.html">Resultados</a>
+</nav>
+
+Lenguaje de Programación: CSS
+/* ===== ENCABEZADO ===== */
+.top-header{
+    background:#020c18;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 35px;
+}
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo-container img{
+    width:42px;
+    height:auto;
+}
+.logo-container span{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+}
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.btn-inscribete{
+    background:#39e8aa;
+    color:#000;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn-inscribete:hover{
+    background:#28d79a;
+}
+.icon-btn{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:26px;
+}
+/* ===== MENÚ PRINCIPAL ===== */
+.menu-principal{
+    background:#020c18;
+    padding:12px 0;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+}
+.menu-principal a{
+    color:#ffffff;
+    text-decoration:none;
+    padding:12px 18px;
+    border:1px solid rgba(255,255,255,0.20);
+    border-radius:8px;
+    background:#121826;
+    transition:0.3s;
+    font-size:14px;
+}
+.menu-principal a:hover{
+    background:#1f3f81;
+}
+.menu-principal a.active{
+    background:#1e40af;
+    border-color:#3b82f6;
+}
+
+
+Sección 2. Introducción de Usabilidad
+Presenta el objetivo de la encuesta.
+•	Título: “Evaluación de Usabilidad”.
+•	Invita al usuario a compartir su opinión sobre la plataforma.
+•	Busca conocer si la navegación fue:
+o	Fácil.
+o	Clara.
+o	Intuitiva.
+o	Útil.
+•	Duración estimada: 3 a 5 minutos.
+•	Indica que la evaluación contribuye a la validación académica del proyecto.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 2 - INTRODUCCIÓN A LA EVALUACIÓN DE USABILIDAD -->
+<section class="hero-usabilidad">
+    <div class="overlay-usabilidad">
+        <h1>Evaluación de Usabilidad</h1>
+        <p class="descripcion-usabilidad">
+            Tu opinión es fundamental para nosotros. A continuación,
+            encontrarás un breve cuestionario diseñado para conocer tu
+            experiencia al utilizar Acacías CyberSafe. El objetivo de esta
+            evaluación es identificar qué tan fácil, comprensible, intuitiva
+            y útil te resultó la navegación dentro de la plataforma.
+        </p>
+        <div class="info-usabilidad">
+            <div class="dato-usabilidad">
+                ⏱️ <span>3-5 min</span>
+            </div>
+            <div class="dato-usabilidad">
+                🎯 <span>Validación Académica</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== INTRODUCCIÓN USABILIDAD ===== */
+.hero-usabilidad{
+    width:95%;
+    max-width:1300px;
+    min-height:260px;
+    margin:50px auto;
+    border-radius:28px;
+    overflow:hidden;
+    position:relative;
+    background-image:
+    linear-gradient(
+        rgba(0,10,25,0.60),
+        rgba(0,10,25,0.60)
+    ),
+    url("imagenes/fondo-red-digital.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:
+    0 0 25px rgba(57,232,170,0.05);
+}
+.overlay-usabilidad{
+    width:90%;
+    text-align:center;
+    padding:40px;
+}
+.overlay-usabilidad h1{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+.descripcion-usabilidad{
+    max-width:900px;
+    margin:0 auto 30px auto;
+    color:#ffffff;
+    font-size:22px;
+    line-height:1.5;
+}
+/* INDICADORES */
+.info-usabilidad{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    margin-top:15px;
+}
+.dato-usabilidad{
+    color:#39e8aa;
+    font-size:20px;
+    font-weight:700;
+}
+.dato-usabilidad span{
+    margin-left:6px;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .overlay-usabilidad h1{
+        font-size:48px;
+    }
+    .descripcion-usabilidad{
+        font-size:18px;
+    }
+}
+@media(max-width:768px){
+    .hero-usabilidad{
+        min-height:auto;
+    }
+    .overlay-usabilidad{
+        padding:30px 20px;
+    }
+    .overlay-usabilidad h1{
+        font-size:38px;
+    }
+    .descripcion-usabilidad{
+        font-size:16px;
+    }
+    .info-usabilidad{
+        flex-direction:column;
+        gap:15px;
+    }
+}
+
+
+Sección 3. Instrucciones del Formulario SUS
+Explica cómo responder la encuesta.
+•	Título: “Instrucciones”.
+•	Presenta afirmaciones relacionadas con la experiencia de uso de Acacías CyberSafe.
+•	Solicita leer cada afirmación y seleccionar la respuesta que mejor represente la opinión del usuario.
+•	Presenta cuatro opciones:
+•	A. Totalmente en desacuerdo
+•	B. En desacuerdo
+•	C. De acuerdo
+•	D. Totalmente de acuerdo
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 3 - INSTRUCCIONES DEL FORMULARIO SUS -->
+<section class="instrucciones-sus">
+    <div class="sus-container">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="sus-info">
+            <h2>Instrucciones:</h2>
+            <p>
+                A continuación, encontrarás una serie de afirmaciones
+                relacionadas con tu experiencia al utilizar Acacías CyberSafe.
+                Lee cada afirmación y selecciona la opción que mejor
+                represente tu opinión.
+            </p>
+            <h3>Opciones de respuesta:</h3>
+        </div>
+        <!-- COLUMNA DERECHA -->
+        <div class="sus-opciones">
+            <div class="opcion-card">
+                <h4>A.</h4>
+                <p>Totalmente en desacuerdo</p>
+            </div>
+            <div class="opcion-card">
+                <h4>B.</h4>
+                <p>En desacuerdo</p>
+            </div>
+            <div class="opcion-card">
+                <h4>C.</h4>
+                <p>De acuerdo</p>
+            </div>
+            <div class="opcion-card">
+                <h4>D.</h4>
+                <p>Totalmente de acuerdo</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 3 - INSTRUCCIONES SUS ===== */
+.instrucciones-sus{
+    background:#010d1a;
+    padding:70px 40px;
+}
+.sus-container{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:60px;
+    align-items:start;
+}
+/* COLUMNA IZQUIERDA */
+.sus-info h2{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+.sus-info p{
+    color:#d7d7d7;
+    font-size:20px;
+    line-height:1.5;
+    max-width:500px;
+    margin-bottom:35px;
+}
+.sus-info h3{
+    color:#39e8aa;
+    font-size:22px;
+    font-weight:700;
+}
+/* COLUMNA DERECHA */
+.sus-opciones{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:22px;
+}
+/* TARJETAS */
+.opcion-card{
+    background:#141b29;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:25px;
+    padding:35px;
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    transition:.3s;
+}
+.opcion-card:hover{
+    border-color:#39e8aa;
+    transform:translateY(-5px);
+    box-shadow:
+    0 0 20px rgba(57,232,170,0.10);
+}
+.opcion-card h4{
+    color:#39e8aa;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+.opcion-card p{
+    color:#ffffff;
+    font-size:18px;
+    line-height:1.4;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .sus-container{
+        grid-template-columns:1fr;
+    }
+    .sus-info h2{
+        font-size:48px;
+    }
+    .sus-opciones{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:768px){
+    .sus-info h2{
+        font-size:38px;
+    }
+    .sus-info p{
+        font-size:18px;
+    }
+    .opcion-card{
+        min-height:auto;
+    }
+}
+
+
+Sección 4. Acceso a Encuesta Externa
+Dirige al usuario al formulario de evaluación.
+•	Mensaje: “Tu opinión es fundamental”.
+•	Identifica el formulario como “Formulario SUS”.
+•	Incluye el botón “Acceder al Formulario”.
+•	El botón permite abrir la encuesta externa donde se registra la opinión del usuario.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 4 - ACCESO AL FORMULARIO SUS -->
+<section class="acceso-sus">
+    <div class="contenido-sus">
+        <h2>Tu opinión es fundamental</h2>
+        <p>
+            Formulario SUS.
+        </p>
+        <a href="https://forms.office.com/"
+           target="_blank"
+           class="btn-sus">
+            Acceder al Formulario
+        </a>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 4 - ACCESO A ENCUESTA SUS ===== */
+.acceso-sus{
+    background:#2f6fdd;
+    padding:60px 20px;
+    text-align:center;
+}
+.contenido-sus{
+    max-width:900px;
+    margin:auto;
+}
+.contenido-sus h2{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+.contenido-sus p{
+    color:#ffffff;
+    font-size:22px;
+    margin-bottom:30px;
+}
+/* BOTÓN */
+.btn-sus{
+    display:inline-block;
+    background:#39e8aa;
+    color:#000000;
+    padding:18px 40px;
+    border-radius:40px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn-sus:hover{
+    background:#28d79a;
+    transform:translateY(-3px);
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .contenido-sus h2{
+        font-size:42px;
+    }
+    .contenido-sus p{
+        font-size:18px;
+    }
+    .btn-sus{
+        width:100%;
+        max-width:320px;
+    }
+}
+
+
+Sección 5. Pie de página
+Incluye:
+•	Acacías CyberSafe.
+•	Correo: info@acaciascybersafe.com.
+•	Ubicación: Acacías, Colombia.
+•	Aviso legal: © 2026 Acacías CyberSafe. Todos los derechos reservados.
+La página recopila la opinión de los usuarios para medir la facilidad de uso, claridad y utilidad de la plataforma, y apoyar la validación académica del proyecto.
+Código Autor:
+Lenguaje de Programación: HTML
+<!-- SECCIÓN 5 - PIE DE PÁGINA -->
+<footer class="footer-usabilidad">
+    <div class="footer-contenido">
+        <p class="footer-titulo">
+            Acacías CyberSafe © 2026
+        </p>
+        <p>
+            <a href="mailto:info@acaciascybersafe.com">
+                info@acaciascybersafe.com
+            </a>
+        </p>
+        <p>
+            Acacías, Colombia
+        </p>
+        <p class="footer-copy">
+            © 2026 Acacías CyberSafe. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+Lenguaje de Programación: CSS
+/* ===== SECCIÓN 5 - PIE DE PÁGINA ===== */
+.footer-usabilidad{
+    background:#010d1a;
+    padding:45px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+.footer-contenido{
+    max-width:1200px;
+    margin:auto;
+}
+.footer-titulo{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+.footer-usabilidad p{
+    color:#ffffff;
+    font-size:16px;
+    margin:6px 0;
+}
+.footer-usabilidad a{
+    color:#ffffff;
+    text-decoration:none;
+    transition:0.3s;
+}
+.footer-usabilidad a:hover{
+    color:#39e8aa;
+}
+.footer-copy{
+    margin-top:22px !important;
+    color:#d9d9d9;
+    font-size:15px;
+}
+

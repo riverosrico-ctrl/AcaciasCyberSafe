@@ -1,0 +1,754 @@
+Código por cada sección de la página 3 “Diagnóstico Inicial (Pre-Test)” o “Tets Inicial”
+Página 3: “Test Inicial” o “Diagnóstico Inicial (Pre-Test)”
+Sección 1. Encabezado
+Incluye la navegación principal del sitio:
+•	Logo de Acacías CyberSafe.
+•	Menú de páginas.
+•	Botón “Inscríbete”.
+•	Icono del carrito.
+•	Acceso de usuario e inicio de sesión.
+
+Código Autor
+
+Lenguaje de Programación: HTML
+
+<header class="header-cybersafe">
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="logo-acaciascybersafe.png" alt="Acacías CyberSafe">
+            <span>Acacías CyberSafe</span>
+        </div>
+        <!-- Acciones -->
+        <div class="header-actions">
+            <a href="/inscripcion" class="btn-inscribete">
+                Inscríbete
+            </a>
+            <a href="/perfil" class="icon-btn" title="Mi Perfil">
+                👤
+            </a>
+            <a href="/carrito" class="icon-btn" title="Carrito">
+                🛒
+            </a>
+        </div>
+    </div>
+    <!-- Menú Principal -->
+    <nav class="main-menu">
+        <a href="/">Inicio</a>
+        <a href="/bienvenida">Bienvenida</a>
+        <a href="/test-inicial" class="activo">Test Inicial</a>
+        <a href="/aprendizaje">Aprendizaje</a>
+        <a href="/modulos-educativos">Módulos Educativos</a>
+        <a href="/simulador-amenazas">Simulador Amenazas</a>
+        <a href="/evaluacion-final">Evaluación Final</a>
+        <a href="/logros">Logros</a>
+        <a href="/evaluacion-usabilidad">Evaluación Usabilidad</a>
+        <a href="/resultados">Resultados</a>
+    </nav>
+</header>
+<style>
+/* ==========================
+   ENCABEZADO
+========================== */
+.header-cybersafe{
+    background:#020b18;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 30px;
+}
+/* Logo */
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo-container img{
+    height:42px;
+}
+.logo-container span{
+    color:#ffffff;
+    font-size:1.7rem;
+    font-weight:600;
+}
+/* Acciones */
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+.btn-inscribete{
+    background:#36e6a0;
+    color:#04131d;
+    text-decoration:none;
+    padding:14px 36px;
+    border-radius:32px;
+    font-size:1.15rem;
+    
+
+Sección 2. Explicación del Diagnóstico
+Presenta el objetivo del pre-test.
+•	Título: “Diagnóstico Inicial (Pre-Test)”.
+•	Texto: “Conoce tu nivel actual de ciberseguridad antes de comenzar.”
+•	Explica que la prueba permite conocer los conocimientos del usuario antes de iniciar la capacitación.
+•	Sirve como punto de partida para comparar los avances posteriores.
+Código Autor
+Lenguaje de Programación: HTML
+<section id="diagnostico-inicial" class="diagnostico-section">
+    <div class="diagnostico-card">
+        <h1>
+            Diagnóstico Inicial (Pre-Test)
+        </h1>
+        <p class="diagnostico-subtitulo">
+            Conoce tu nivel actual de ciberseguridad antes de comenzar.
+        </p>
+        <div class="diagnostico-imagen">
+            <img
+            src="https://static.wixstatic.com/media/diagnostico-ciberseguridad.png"
+            alt="Diagnóstico Inicial Acacías CyberSafe">
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   DIAGNÓSTICO INICIAL
+================================== */
+.diagnostico-section{
+    background:#020b18;
+    padding:40px;
+}
+.diagnostico-card{
+    max-width:1120px;
+    margin:auto;
+    text-align:center;
+    background:rgba(255,255,255,.05);
+    border-radius:40px;
+    padding:40px 40px 20px;
+}
+/* TÍTULO */
+.diagnostico-card h1{
+    color:white;
+    font-size:5rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+/* SUBTÍTULO */
+.diagnostico-subtitulo{
+    color:white;
+    font-size:1.7rem;
+    margin-bottom:30px;
+}
+/* IMAGEN */
+.diagnostico-imagen{
+    display:flex;
+    justify-content:center;
+}
+.diagnostico-imagen img{
+    width:100%;
+    max-width:780px;
+    height:auto;
+    border-radius:25px;
+    object-fit:cover;
+}
+/* RESPONSIVE */
+@media(max-width:992px){
+    .diagnostico-card h1{
+        font-size:3rem;
+    }
+    .diagnostico-subtitulo{
+        font-size:1.2rem;
+    }
+}
+@media(max-width:768px){
+    .diagnostico-card{
+        padding:30px 20px;
+    }
+    .diagnostico-card h1{
+        font-size:2.3rem;
+    }
+}
+
+
+Sección 3. ¿Para qué sirve este diagnóstico?
+Explica los beneficios de realizar la evaluación inicial.
+•	Nivel – Conocimiento actual: identifica el nivel de conocimientos sobre ciberseguridad.
+•	Amenazas – Áreas de mejora: detecta dificultades para reconocer amenazas digitales.
+•	Progreso – Punto de comparación: permite comparar los resultados iniciales con los resultados finales.
+•	Validación – Validación académica: contribuye a validar académicamente el proyecto Acacías CyberSafe.
+Código Autor:
+Lenguaje de Programación: HTML
+<section id="utilidad-diagnostico" class="utilidad-section">
+    <div class="utilidad-container">
+        <h2>
+            🔍 ¿Para qué sirve este diagnóstico?
+        </h2>
+        <div class="utilidad-grid">
+            <!-- 01 -->
+            <div class="utilidad-card">
+                <span class="utilidad-numero">
+                    01 / NIVEL
+                </span>
+                <h3>
+                    Conocimiento actual
+                </h3>
+                <p>
+                    Identificar tu nivel actual de conocimiento sobre
+                    ciberseguridad.
+                </p>
+            </div>
+            <!-- 02 -->
+            <div class="utilidad-card">
+                <span class="utilidad-numero">
+                    02 / AMENAZAS
+                </span>
+                <h3>
+                    Áreas de mejora
+                </h3>
+                <p>
+                    Detectar posibles áreas de mejora en la identificación
+                    de amenazas digitales.
+                </p>
+            </div>
+            <!-- 03 -->
+            <div class="utilidad-card">
+                <span class="utilidad-numero">
+                    03 / PROGRESO
+                </span>
+                <h3>
+                    Punto de comparación
+                </h3>
+                <p>
+                    Servir como punto de comparación para evaluar tu
+                    progreso al finalizar la capacitación.
+                </p>
+            </div>
+            <!-- 04 -->
+            <div class="utilidad-card">
+                <span class="utilidad-numero">
+                    04 / VALIDACIÓN
+                </span>
+                <h3>
+                    Validación académica
+                </h3>
+                <p>
+                    Contribuir a la validación académica del proyecto
+                    Acacías CyberSafe.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+Lenguaje de Programación: CSS
+/* ==================================
+   UTILIDAD DEL DIAGNÓSTICO
+================================== */
+.utilidad-section{
+    background:#020b18;
+    padding:90px 40px;
+}
+.utilidad-container{
+    max-width:1400px;
+    margin:auto;
+}
+.utilidad-container h2{
+    color:white;
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:60px;
+}
+/* GRID */
+.utilidad-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+/* TARJETAS */
+.utilidad-card{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:18px;
+    padding:30px;
+    min-height:230px;
+}
+.utilidad-numero{
+    display:block;
+    color:#1d7cff;
+    font-size:1rem;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+.utilidad-card h3{
+    color:white;
+    font-size:2rem;
+    margin-bottom:18px;
+    line-height:1.3;
+}
+.utilidad-card p{
+    color:#d8dbe2;
+    font-size:1.15rem;
+    line-height:1.6;
+}
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .utilidad-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:768px){
+    .utilidad-container h2{
+        font-size:2.5rem;
+    }
+    .utilidad-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+Sección 4. Estado y Duración del Test
+Muestra información sobre el avance y las instrucciones.
+•	Título: “Progreso del diagnóstico”.
+•	Indicador de progreso: “1% – 100%”.
+•	Duración estimada: 5 a 10 minutos.
+•	Indica que el usuario debe responder según sus conocimientos actuales.
+•	Recomienda seleccionar la opción que considere correcta.
+•	Solicita no consultar fuentes externas para obtener una medición real del nivel de conocimiento.
+Código Autor:
+Lenguaje de Programación: HTML
+<section id="progreso-diagnostico" class="progreso-section">
+    <div class="progreso-card">
+        <div class="progreso-header">
+            <h3>
+                Progreso del diagnóstico
+            </h3>
+            <span class="progreso-porcentaje">
+                1% – 100%
+            </span>
+        </div>
+        <!-- Barra de progreso -->
+        <div class="barra-contenedor">
+            <div class="barra-progreso"></div>
+        </div>
+        <!-- Duración -->
+        <div class="info-item">
+            <span class="icono">
+                ⏱️
+            </span>
+            <p>
+                <strong>Duración estimada:</strong>
+                5 a 10 minutos.
+            </p>
+        </div>
+        <!-- Instrucciones -->
+        <div class="info-item">
+            <span class="icono">
+                📋
+            </span>
+            <p>
+                <strong>Instrucción:</strong>
+                Responde cada pregunta de acuerdo con tus conocimientos actuales y selecciona la opción que consideres correcta. No consultes fuentes externas; lo importante es conocer tu nivel real de conocimiento antes de comenzar.
+            </p>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   PROGRESO DEL DIAGNÓSTICO
+================================== */
+.progreso-section{
+    background:#020b18;
+    padding:60px 40px;
+}
+.progreso-card{
+    max-width:1200px;
+    margin:auto;
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;
+    padding:35px 40px;
+}
+/* Cabecera */
+.progreso-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+.progreso-header h3{
+    color:#ffffff;
+    font-size:1.7rem;
+    font-weight:500;
+}
+.progreso-porcentaje{
+    color:#36e6a0;
+    font-size:1.5rem;
+    font-weight:700;
+}
+/* Barra */
+.barra-contenedor{
+    width:100%;
+    height:18px;
+    background:#50545d;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:35px;
+}
+.barra-progreso{
+    width:35%;
+    height:100%;
+    background:#36e6a0;
+    border-radius:30px;
+}
+/* Información */
+.info-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+}
+.icono{
+    font-size:1.3rem;
+}
+.info-item p{
+    color:#d8dbe2;
+    font-size:1.15rem;
+    line-height:1.6;
+    margin:0;
+}
+.info-item strong{
+    color:white;
+}
+
+
+Sección 5. Preguntas de Conocimiento
+Presenta los temas que se evalúan en el diagnóstico.
+•	¿Qué es phishing?
+o	Fraude digital en el que los atacantes suplantan entidades confiables para obtener datos personales, bancarios o credenciales.
+•	¿Cómo identificar un comprobante falso?
+o	Verificando directamente el ingreso del dinero y revisando datos, fechas y montos.
+o	No se debe confiar únicamente en capturas de pantalla.
+•	¿Qué es la autenticación en dos pasos?
+o	Es una medida de seguridad que solicita una segunda verificación además de la contraseña.
+Código Autor:
+Lenguaje de Programación: HTML
+<section id="preguntas-conocimiento" class="conocimiento-section">
+    <div class="conocimiento-container">
+        <h2>
+            Preguntas de conocimiento
+        </h2>
+        <!-- Pregunta 1 -->
+        <div class="pregunta-item">
+            <h3>
+                ¿Qué es phishing?
+            </h3>
+            <p>
+                El phishing es una modalidad de fraude digital en la que los atacantes
+                se hacen pasar por entidades confiables para obtener información
+                personal, bancaria o credenciales de acceso mediante engaños.
+            </p>
+        </div>
+        <!-- Pregunta 2 -->
+        <div class="pregunta-item">
+            <h3>
+                ¿Cómo identificar un comprobante falso?
+            </h3>
+            <p>
+                Un comprobante falso puede identificarse verificando directamente
+                el ingreso del dinero en la cuenta, revisando inconsistencias en
+                datos, fechas o montos y evitando confiar únicamente en capturas
+                de pantalla.
+            </p>
+        </div>
+        <!-- Pregunta 3 -->
+        <div class="pregunta-item">
+            <h3>
+                ¿Qué es autenticación en dos pasos?
+            </h3>
+            <p>
+                La autenticación en dos pasos (2FA) es un mecanismo de seguridad
+                que solicita una segunda verificación, además de la contraseña,
+                para proteger una cuenta contra accesos no autorizados.
+            </p>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   PREGUNTAS DE CONOCIMIENTO
+================================== */
+.conocimiento-section{
+    background:#020b18;
+    padding:90px 40px;
+    color:white;
+}
+.conocimiento-container{
+    max-width:980px;
+    margin:0 auto;
+}
+/* TÍTULO */
+.conocimiento-container h2{
+    font-size:4.5rem;
+    font-weight:700;
+    margin-bottom:50px;
+    color:white;
+}
+/* BLOQUES DE PREGUNTAS */
+.pregunta-item{
+    padding:30px 0;
+    border-top:1px solid rgba(255,255,255,.12);
+}
+.pregunta-item:last-child{
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+/* PREGUNTA */
+.pregunta-item h3{
+    font-size:3rem;
+    font-weight:700;
+    color:white;
+    margin-bottom:20px;
+}
+/* RESPUESTA */
+.pregunta-item p{
+    font-size:1.35rem;
+    line-height:1.6;
+    color:#d5d9e0;
+    max-width:950px;
+}
+/* HOVER SUAVE */
+.pregunta-item:hover h3{
+    color:#36e6a0;
+    transition:.3s ease;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .conocimiento-section{
+        padding:60px 20px;
+    }
+    .conocimiento-container h2{
+        font-size:2.7rem;
+        line-height:1.2;
+    }
+    .pregunta-item h3{
+        font-size:1.9rem;
+    }
+    .pregunta-item p{
+        font-size:1rem;
+    }
+}
+
+
+Sección 6. Acceso al Formulario y Cierre
+Invita a comenzar la evaluación.
+•	Mensaje motivacional para descubrir qué tan preparado está el usuario frente a los riesgos digitales.
+•	Incluye iconos relacionados con protección, teléfono y computador.
+•	Repite la duración estimada de 5 a 10 minutos.
+•	Botón: “Acceder al formulario de diagnóstico”.
+•	Este botón lleva al usuario al formulario donde puede responder el pre-test.
+Código Autor:
+Lenguaje de Programación: HTML
+<section id="acceso-formulario" class="formulario-section">
+    <div class="formulario-card">
+        <div class="formulario-info">
+            <h2>
+                ¡Comencemos este diagnóstico y
+                descubramos qué tan preparado estás
+                para enfrentar los riesgos del mundo
+                digital! 🛡️ 📱 💻
+            </h2>
+            <div class="duracion">
+                ⏱️ <strong>Duración estimada:</strong>
+                5 a 10 minutos.
+            </div>
+        </div>
+        <div class="formulario-accion">
+            <a href="/formulario-pretest"
+               class="btn-formulario">
+                Acceder al formulario de diagnóstico
+            </a>
+        </div>
+    </div>
+</section>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   ACCESO AL FORMULARIO
+================================== */
+.formulario-section{
+    background:#020b18;
+    padding:90px 40px;
+}
+.formulario-card{
+    max-width:1250px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+    align-items:center;
+    padding:45px 50px;
+    border-radius:25px;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.15);
+}
+/* Texto */
+.formulario-info h2{
+    color:white;
+    font-size:3rem;
+    font-weight:700;
+    line-height:1.15;
+    margin-bottom:25px;
+}
+.duracion{
+    color:#d8dbe2;
+    font-size:1.4rem;
+}
+/* Botón */
+.formulario-accion{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.btn-formulario{
+    display:inline-block;
+    background:#36e6a0;
+    color:#04131d;
+    text-decoration:none;
+    text-align:center;
+    padding:22px 40px;
+    min-width:380px;
+    border-radius:12px;
+    font-size:1.25rem;
+    font-weight:600;
+    transition:.3s ease;
+}
+.btn-formulario:hover{
+    background:#4ef6b4;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px
+    rgba(54,230,160,.30);
+}
+/* Responsive */
+@media(max-width:992px){
+    .formulario-card{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+    .formulario-info h2{
+        font-size:2.3rem;
+    }
+    .btn-formulario{
+        min-width:100%;
+        max-width:450px;
+    }
+}
+@media(max-width:768px){
+    .formulario-section{
+        padding:60px 20px;
+    }
+    .formulario-card{
+        padding:30px;
+    }
+    .formulario-info h2{
+        font-size:1.9rem;
+    }
+    .duracion{
+        font-size:1.1rem;
+    }
+}
+
+
+Sección 7. Pie de página
+Incluye:
+•	Acacías CyberSafe.
+•	Correo: info@acaciascybersafe.com.
+•	Ubicación: Acacías, Colombia.
+•	Aviso legal: © 2026 Acacías CyberSafe. Todos los derechos reservados.
+Esta página mide los conocimientos iniciales del usuario y establece una referencia para evaluar su progreso durante la capacitación en seguridad digital.
+Código Autor
+Lenguaje de Programación: HTML
+<footer id="footer-pretest" class="footer-section">
+    <div class="footer-container">
+        <p class="footer-proyecto">
+            Acacías CyberSafe © 2026
+        </p>
+        <p class="footer-contacto">
+            <a href="mailto:info@acaciascybersafe.com">
+                info@acaciascybersafe.com
+            </a>
+        </p>
+        <p class="footer-ubicacion">
+            Acacías, Colombia
+        </p>
+        <p class="footer-copy">
+            © 2026 Acacías CyberSafe.
+            Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+Lenguaje de Programación: CSS
+/* ==================================
+   PIE DE PÁGINA - TEST INICIAL
+================================== */
+.footer-section{
+    background:#020b18;
+    padding:80px 20px 40px;
+    text-align:center;
+    color:white;
+}
+.footer-container{
+    max-width:900px;
+    margin:auto;
+}
+/* Proyecto */
+.footer-proyecto{
+    font-size:1.8rem;
+    font-weight:600;
+    margin-bottom:8px;
+    color:white;
+}
+/* Correo */
+.footer-contacto{
+    margin-bottom:6px;
+}
+.footer-contacto a{
+    color:white;
+    text-decoration:none;
+    font-size:1.4rem;
+    transition:.3s;
+}
+.footer-contacto a:hover{
+    color:#36e6a0;
+}
+/* Ubicación */
+.footer-ubicacion{
+    color:white;
+    font-size:1.4rem;
+    margin-bottom:45px;
+}
+/* Copyright */
+.footer-copy{
+    color:white;
+    font-size:1.2rem;
+}
+/* Responsive */
+@media(max-width:768px){
+    .footer-proyecto{
+        font-size:1.4rem;
+    }
+    .footer-contacto a{
+        font-size:1.1rem;
+    }
+    .footer-ubicacion{
+        font-size:1.1rem;
+    }
+    .footer-copy{
+        font-size:1rem;
+    }
+}
+
